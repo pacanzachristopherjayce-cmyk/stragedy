@@ -1,13 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stragedy</title>
+    <link rel="stylesheet" href="./CSS/index.css">
 
 </head>
+
 <body>
-    <p>HELLO</p>
-    
+
+    <div class="container">
+        <div class="nav-menu child-container">
+
+            <div class="group-1">
+                <img src="ASSETS/IMAGES/logo.png" alt="stragedy-logo" width="85" height="80">
+                <img class="hamburger-menu clickable" src="ASSETS/IMAGES/hamburger-menu.svg" alt="hamburger-menu"
+                    width="50" height="60">
+                <div class="nav-popup">
+                    <a href="skl">Tragedies</a>
+                    <a>Contact</a>
+                    <a>About</a>
+                </div>
+            </div>
+            <div class="group-2">
+                <img class="clickable" src="ASSETS/IMAGES/search-icon.svg" search-icon" width="40" height="40">
+            </div>
+
+        </div>
+
+        <div class="main-content child-container">
+
+        </div>
+        <div class="recent-story child-container">
+
+        </div>
+    </div>
+
+    <script>
+        const hamburgerMenu = document.querySelector(".hamburger-menu");
+        const navPopup = document.querySelector(".nav-popup");
+        const navMenu = document.querySelector(".nav-menu")
+        console.log(navPopup);
+
+        hamburgerMenu.addEventListener("click", () => {
+            navPopup.classList.toggle("open");
+            navMenu.classList.toggle("remove-right-border");
+        });
+    </script>
 </body>
+
 </html>
