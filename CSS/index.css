@@ -50,7 +50,7 @@
     background-color: #1b263b;
     border-right: 1px solid #415a77;
 
-    transform: translateX(-100%);
+    transform: translateX(-99%);
     transition: 0.3s;
     z-index: -1;
 
