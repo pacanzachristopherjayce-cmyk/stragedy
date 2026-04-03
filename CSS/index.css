@@ -1,6 +1,16 @@
+/* --- Font Imports --- */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
 
+/* --- CSS Custom Properties --- */
+:root {
+    --bg-dark: #1b263b;
+    --border-color: #415a77;
+    --text-white: white;
+    --accent-gold: #c6a850;
+}
+
+/* --- Global Styles --- */
 * {
     padding: 0;
     margin: 0;
@@ -11,6 +21,7 @@
     cursor: pointer;
 }
 
+/* --- Layout Container --- */
 .homepage-container {
     width: 100%;
     height: 100vh;
@@ -19,14 +30,15 @@
     overflow-x: hidden;
 }
 
+/* --- Navigation Menu --- */
 .nav-menu {
-    background-color: #1b263b;
+    background-color: var(--bg-dark);
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
     justify-content: space-between;
     padding-block: 0.5em;
-    border-right: 1px solid #415a77;
+    border-right: 1px solid var(--border-color);
     z-index: 1;
     transition: 0.3s;
 }
@@ -47,17 +59,13 @@
     left: 100px;
     width: 300px;
     height: 100vh;
-    background-color: red;
-    background-color: #1b263b;
-    border-right: 1px solid #415a77;
-
+    background-color: var(--bg-dark);
+    border-right: 1px solid var(--border-color);
     transform: translateX(-99%);
     transition: 0.3s;
     z-index: -1;
-
     font-family: "Roboto", sans-serif;
-    color: white;
-
+    color: var(--text-white);
     display: flex;
     flex-flow: column nowrap;
     font-size: 2.5rem;
@@ -73,19 +81,18 @@
 .nav-popup.open {
     transform: translateX(0);
     visibility: visible;
-
 }
 
+/* --- Main Content Area --- */
 .main-content {
-    background-color: #1b263b;
-    border-right: 1px solid #415a77;
+    background-color: var(--bg-dark);
+    border-right: 1px solid var(--border-color);
     overflow-y: auto;
-    color: white;
+    color: var(--text-white);
     font-family: "Roboto", sans-serif;
-
-
 }
 
+/* --- Featured Stories Section --- */
 .featured-story {
     width: 100%;
 }
@@ -99,49 +106,40 @@
 .featured-stories {
     padding: 2em 3em;
     height: 100%;
-
     display: flex;
     align-items: center;
     flex-flow: column wrap;
     justify-content: space-around;
-
 }
 
 .featured-story-summary {
     padding-right: 5em;
 }
 
-/* .featured-story-summary {
-    width: 500px;
-} */
-
 div>.category,
 div>.title,
 div>h1 {
-    color: #c6a850;
+    color: var(--accent-gold);
     font-family: "Merriweather", serif;
 }
 
-
 div>.recent-story {
-    background-color: #1b263b;
+    background-color: var(--bg-dark);
 }
 
 .featured-story-summary>img {
     float: right;
 }
 
+/* --- Navigation Controls --- */
 .featured-stories-nav {
     margin-top: 10em;
 }
 
-
 .featured-stories-nav>* {
-
     width: 100%;
     height: 30px;
 }
-
 
 .featured-stories-nav>.five-dots {
     display: flex;
@@ -152,10 +150,9 @@ div>.recent-story {
 .five-dots>span {
     width: 10px;
     height: 10px;
-    background-color: white;
+    background-color: var(--text-white);
     border-radius: 10px;
 }
-
 
 .back-forward-button {
     display: flex;
@@ -166,7 +163,7 @@ div>.recent-story {
 
 .back-forward-button>* {
     border-radius: 50px;
-    background-color: white;
+    background-color: var(--text-white);
     padding: 0.5em;
     padding: 0 auto;
     cursor: pointer;
@@ -175,15 +172,15 @@ div>.recent-story {
 
 .back-forward-button>.backward:hover {
     transform: translateX(-5px);
-    box-shadow: 1px 0 3px white;
+    box-shadow: 1px 0 3px var(--text-white);
 }
 
 .back-forward-button>.forward:hover {
     transform: translateX(5px);
-    box-shadow: -1px 0 3px white;
-
+    box-shadow: -1px 0 3px var(--text-white);
 }
 
+/* --- Utility Classes --- */
 .float-left>img {
     float: left;
     margin-right: 2em;
