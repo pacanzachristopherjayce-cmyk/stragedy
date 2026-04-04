@@ -123,7 +123,7 @@
         background-color: rgba(255, 255, 255, 0.05);
       }
 
-      /* --- Main Content Area --- */
+
       .main-content {
         display: flex;
         flex-direction: column;
@@ -190,7 +190,7 @@
         display: table;
       }
 
-      /* --- Social Footer --- */
+
       .social-footer {
         margin-top: auto;
         padding: 30px 0;
@@ -218,7 +218,7 @@
         color: var(--bg);
       }
 
-      /* --- Right Sidebar --- */
+ 
       .sidebar-right {
         border-left: 1px solid var(--line);
         padding: 20px;
@@ -280,15 +280,16 @@
 		color: var(--gold);
 	}
 
-  /* --- Main Content --- */
+
 .main-content {
   display: flex;
   flex-direction: column;
   overflow-y: auto;
   background-color: var(--panel);
+  padding-top: 100px;
 }
 
-/* ======= HERO SECTION ======= */
+
 .hero-section {
   min-height: 100vh;
   display: flex;
@@ -303,12 +304,13 @@
   padding: 18px 30px;
   border-bottom: 1px solid var(--line);
   background-color: var(--panel-dark);
+  margin-bottom: 70px;
 }
 
 .hero-topbar-title,
 .hero-topbar-category {
   color: var(--gold);
-  font-size: 1.1rem;
+  font-size: 2rem;
   font-weight: 600;
 }
 
@@ -320,6 +322,8 @@
   align-items: flex-start;
   gap: 20px;
   padding: 30px 30px 0;
+  max-height:400px;
+
 }
 
 .hero-text { flex: 1; }
@@ -368,7 +372,7 @@
   flex-direction: column;
   align-items: center;
   gap: 12px;
-  padding: 24px 0 30px;
+  padding: 0 0 30px;
 }
 
 .nav-dots { display: flex; gap: 10px; }
@@ -401,7 +405,7 @@
 }
 .arrow-btn:hover { background: white; color: var(--bg); }
 
-/* ======= ARTICLE SECTION ======= */
+
 .article-section {
   display: flex;
   flex-direction: column;
@@ -458,9 +462,9 @@
     </nav>
 
     <main class="main-content">
-      <main class="main-content">
+    
 
-  <!-- HERO (Page 1) -->
+
   <section class="hero-section">
     <div class="hero-topbar">
       <span class="hero-topbar-title">Title goes here</span>
@@ -481,7 +485,7 @@
       </div>
 
       <div class="hero-image">
-        <!-- Swap the placeholder div for an <img> tag when you have your image -->
+    
         <div class="hero-img-placeholder">
           <i class="fa-solid fa-satellite"></i>
         </div>
@@ -503,11 +507,11 @@
     </div>
   </section>
 
-  <!-- ARTICLE (Page 2 — scroll down to reach) -->
+
   <section class="article-section">
     <h1 class="article-page-title">Title</h1>
 
-    <!-- Row 1: image left, text right -->
+
     <div class="article-row">
       <div class="article-img-block">IMG</div>
       <div class="article-text-block">
@@ -523,7 +527,7 @@
       </div>
     </div>
 
-    <!-- Row 2: text left, image right -->
+  
     <div class="article-row reverse">
       <div class="article-img-block">IMG</div>
       <div class="article-text-block">
