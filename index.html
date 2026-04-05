@@ -1,599 +1,281 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Template</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <style>
-      :root {
-        --bg: #0d2348;
-        --panel: #172f5d;
-        --panel-dark: #10274d;
-        --right: #112954;
-        --line: #2b456e;
-        --gold: #d9b449;
-        --text: #f4f6fb;
-        --card: #081827;
-      }
 
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        background-color: var(--bg);
-        color: var(--text);
-        display: grid;
-        grid-template-columns: 80px 1fr 300px;
-        height: 100vh;
-        overflow: hidden;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Template</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="/CSS/index.css">
+</head>
 
-      .sidebar-left {
-        border-right: 1px solid var(--line);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px 0;
-        background-color: var(--panel-dark);
-        position: relative;
-        z-index: 20;
-      }
+<body>
 
-      .logo {
-        width: 40px;
-        height: 40px;
-        background: linear-gradient(
-          135deg,
-          #dae9ff 0 30%,
-          #d4a340 30% 63%,
-          #78a66f 63% 100%
-        );
-        border-radius: 50%;
-        margin-bottom: 30px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: 2px solid rgba(255, 255, 255, 0.15);
-        font-size: 0;
-        text-decoration: none;
-      }
+  <nav class="sidebar-left">
+    <img class="logo" src="/stragedy/ASSETS/IMAGES/homePage/logo.png" alt="" width="70" height="65">
+    <i class="fa-solid fa-bars menu-icon" id="hamburgerBtn"></i>
+    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+  </nav>
 
-      .menu-icon {
-        font-size: 28px;
-        color: white;
-        cursor: pointer;
-        margin-bottom: auto;
-        transition: color 0.2s;
-      }
+  <nav class="nav-menu" id="navMenu">
+    <ul class="nav-list">
+      <li><a href="#">Tragedies</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+  </nav>
 
-      .menu-icon:hover {
-        color: #ccc;
-      }
+  <main class="main-content">
 
-      .search-icon {
-        font-size: 20px;
-        color: white;
-        cursor: pointer;
-        margin-bottom: 20px;
-      }
+    <h1 class="text-logo">Stragedy</h1>
 
-      .nav-menu {
-        position: fixed;
-        top: 0;
-        left: 80px;
-        bottom: 0;
-        width: 250px;
-        background-color: #0c1c38;
-        border-right: 1px solid var(--line);
-        box-shadow: 18px 0 40px rgba(0, 0, 0, 0.28);
-        z-index: 10;
-        transform: translateX(-100%);
-        transition: transform 0.3s ease-in-out;
-        padding-top: 80px;
-      }
-
-      .nav-menu.active {
-        transform: translateX(0);
-      }
-
-      .nav-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-
-      .nav-list li {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      }
-
-      .nav-list a {
-        display: block;
-        padding: 18px 25px;
-        color: white;
-        text-decoration: none;
-        font-size: 1.1rem;
-        transition: background-color 0.2s;
-      }
-
-      .nav-list a:hover {
-        background-color: rgba(255, 255, 255, 0.05);
-      }
+    <section class="hero-section">
 
 
-      .main-content {
-        display: flex;
-        flex-direction: column;
-        padding: 20px 40px 0 40px;
-        overflow-y: auto;
-        position: relative;
-        z-index: 1;
-        background-color: var(--panel);
-      }
-
-      .page-title {
-        color: var(--gold);
-        text-align: center;
-        font-size: 2.2rem;
-        margin-top: 0;
-        margin-bottom: 30px;
-        letter-spacing: 1px;
-        display: inline-block;
-        align-self: center;
-        padding: 8px 18px 10px;
-      }
-
-      .content-section {
-        margin-bottom: 20px;
-      }
-
-      .img-placeholder {
-        background-color: #6f89aa;
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 2.5rem;
-        color: white;
-        float: left;
-        margin-right: 20px;
-        margin-bottom: 10px;
-        overflow: hidden;
-      }
-
-      .mem-box-1 {
-        margin-left: auto;
-        margin-right: auto;
-        width: 240px;
-        height: 240px;
-        border-radius: 900%;
-      }
-
-      .img-box-2 {
-        width: 50%;
-        height: 240px;
-      }
-
-      .text-block {
-        font-size: 0.95rem;
-        line-height: 1.6;
-        margin-bottom: 15px;
-        color: #f2f4f8;
-      }
-
-      .clearfix::after {
-        content: "";
-        clear: both;
-        display: table;
-      }
-
-
-      .social-footer {
-        margin-top: auto;
-        padding: 30px 0;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-      }
-
-      .social-icon {
-        width: 45px;
-        height: 45px;
-        border: 2px solid white;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 20px;
-        color: white;
-        text-decoration: none;
-        transition: all 0.3s ease;
-      }
-
-      .social-icon:hover {
-        background-color: white;
-        color: var(--bg);
-      }
-
- 
-      .sidebar-right {
-        border-left: 1px solid var(--line);
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        background: linear-gradient(180deg, #122d5a, #10264f);
-      }
-
-      .sidebar-title {
-        color: var(--gold);
-        font-size: 2rem;
-        margin-top: 0;
-        margin-bottom: 20px;
-		text-align:center;
-      }
-	  
-	.main-container{
-		display:block;
-		justify-content:space-between;
-		align-items:center;
-		gap:20px;
-	}
-
-	.containers{	
-		text-align:center;
-		width:250px;
-		height:250px;
-	}
-
-	.container-image img{
-		width: 100%;
-		height: 180px;
-		object-fit: cover;
-		display: block;
-		border-radius:10%;
-	}
-	.container-image img:hover{
-		transform: scale(1.05);
-		z-index: 10;
-		position: relative; 
-	}	
-	
-	.container-desc h2{
-		margin-top:0px;
-	}
-	
-	.container-desc{
-		height:70px;
-	}
-	
-	.container-desc a{
-		font-size: 1rem;
-        color: var(--text);
-        text-decoration: none;
-	}
-	
-	.container-desc a:hover{
-		text-decoration:underline;
-		color: var(--gold);
-	}
-
-
-.main-content {
-  display: flex;
-  flex-direction: column;
-  overflow-y: auto;
-  background-color: var(--panel);
-  padding-top: 100px;
-}
-
-
-.hero-section {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-.hero-topbar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  padding: 18px 30px;
-  border-bottom: 1px solid var(--line);
-  background-color: var(--panel-dark);
-  margin-bottom: 70px;
-}
-
-.hero-topbar-title,
-.hero-topbar-category {
-  color: var(--gold);
-  font-size: 2rem;
-  font-weight: 600;
-}
-
-.hero-topbar-sep { opacity: 0.5; }
-
-.hero-body {
-  flex: 1;
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-  padding: 30px 30px 0;
-  max-height:400px;
-
-}
-
-.hero-text { flex: 1; }
-
-.hero-featured-label {
-  color: var(--gold);
-  font-size: 3.2rem;
-  font-weight: 800;
-  margin: 0 0 10px;
-  line-height: 1.1;
-}
-
-.hero-subtitle {
-  font-size: 1rem;
-  margin: 0 0 25px;
-  opacity: 0.85;
-}
-
-.hero-desc {
-  font-size: 0.97rem;
-  line-height: 1.7;
-  color: #d8deee;
-  margin-bottom: 20px;
-  max-width: 380px;
-}
-
-.hero-learn-more { color: var(--text); text-decoration: underline; font-size: 0.97rem; }
-.hero-learn-more:hover { color: var(--gold); }
-
-.hero-image { width: 340px; flex-shrink: 0; }
-
-.hero-img-placeholder {
-  width: 100%;
-  height: 300px;
-  background: linear-gradient(135deg, #1e3d6e, #2b5c9a);
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 5rem;
-  color: rgba(255,255,255,0.2);
-}
-
-.hero-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  padding: 0 0 30px;
-}
-
-.nav-dots { display: flex; gap: 10px; }
-
-.nav-dot {
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: white;
-  opacity: 0.5;
-  cursor: pointer;
-}
-.nav-dot.active { opacity: 1; }
-
-.nav-arrows { display: flex; gap: 12px; }
-
-.arrow-btn {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 2px solid white;
-  background: transparent;
-  color: white;
-  font-size: 1rem;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.2s, color 0.2s;
-}
-.arrow-btn:hover { background: white; color: var(--bg); }
-
-
-.article-section {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  padding: 30px;
-}
-
-.article-page-title {
-  color: var(--gold);
-  font-size: 2rem;
-  font-weight: 800;
-  margin: 0 0 10px;
-  text-align: center;
-}
-
-.article-row { display: flex; gap: 24px; align-items: flex-start; }
-.article-row.reverse { flex-direction: row-reverse; }
-
-.article-img-block {
-  flex-shrink: 0;
-  width: 260px;
-  height: 240px;
-  background: linear-gradient(135deg, #1e3d6e, #2b5c9a);
-  border-radius: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2.5rem;
-  font-weight: 800;
-  color: var(--gold);
-}
-
-.article-text-block h2 { color: var(--gold); font-size: 1.5rem; margin: 0 0 10px; }
-.article-text-block p { font-size: 0.95rem; line-height: 1.75; color: #d8deee; text-align: justify; margin: 0; }
-.article-learn-more { color: var(--text); text-decoration: underline; }
-.article-learn-more:hover { color: var(--gold); }
-
-		  
-    </style>
-  </head>
-  <body>
-    <nav class="sidebar-left">
-      <a href="#" class="logo">Logo</a>
-      <i class="fa-solid fa-bars menu-icon" id="hamburgerBtn"></i>
-      <i class="fa-solid fa-magnifying-glass search-icon"></i>
-    </nav>
-
-    <nav class="nav-menu" id="navMenu">
-      <ul class="nav-list">
-        <li><a href="#">Tragedies</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">About</a></li>
-      </ul>
-    </nav>
-
-    <main class="main-content">
-    
-
-
-  <section class="hero-section">
-    <div class="hero-topbar">
-      <span class="hero-topbar-title">Title goes here</span>
-      <span class="hero-topbar-sep">-</span>
-      <span class="hero-topbar-category">Category goes here</span>
-    </div>
-
-    <div class="hero-body">
-      <div class="hero-text">
-        <h1 class="hero-featured-label">Featured story</h1>
-        <p class="hero-subtitle">Lorem ipsum dolor sit amet, consectetur</p>
-        <p class="hero-desc">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum dignissimos,
-          tenetur officiis necessitatibus repellat aut perferendis ullam nisi voluptates
-          pariatur ut quae quod veniam ipsam, dolor enim reprehenderit vitae repellendus.
-        </p>
-        <a href="#" class="hero-learn-more">Learn More</a>
+      <div class="hero-topbar">
+        <span class="hero-topbar-title" id="slideTitle">Title goes here</span>
+        <span class="hero-topbar-sep">-</span>
+        <span class="hero-topbar-category" id="slideCategory">Category goes here</span>
       </div>
 
-      <div class="hero-image">
-    
-        <div class="hero-img-placeholder">
-          <i class="fa-solid fa-satellite"></i>
+
+      <div class="hero-slides-track">
+
+        <div class="hero-slides-inner" id="heroSlidesInner">
+
+
+          <div class="hero-slide">
+            <div class="hero-text">
+              <h1 class="hero-featured-label">Featured story</h1>
+              <p class="hero-subtitle">Lorem ipsum dolor sit amet, consectetur</p>
+              <p class="hero-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum dignissimos,
+                tenetur officiis necessitatibus repellat aut perferendis ullam nisi voluptates
+                pariatur ut quae quod veniam ipsam, dolor enim reprehenderit vitae repellendus.
+              </p>
+              <a href="#" class="hero-learn-more">Learn More</a>
+            </div>
+            <div class="hero-image">
+              <div class="hero-img-placeholder">
+                <i class="fa-solid fa-satellite"></i>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="hero-slide">
+            <div class="hero-text">
+              <h1 class="hero-featured-label">Breaking News</h1>
+              <p class="hero-subtitle">Politics · April 2026</p>
+              <p class="hero-desc">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore
+                veritatis et quasi architecto beatae vitae dicta sunt.
+              </p>
+              <a href="#" class="hero-learn-more">Learn More</a>
+            </div>
+            <div class="hero-image">
+              <div class="hero-img-placeholder">
+                <i class="fa-solid fa-globe"></i>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="hero-slide">
+            <div class="hero-text">
+              <h1 class="hero-featured-label">Tech Spotlight</h1>
+              <p class="hero-subtitle">Technology · April 2026</p>
+              <p class="hero-desc">
+                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt
+                neque porro quisquam est qui dolorem ipsum quia dolor sit amet.
+              </p>
+              <a href="#" class="hero-learn-more">Learn More</a>
+            </div>
+            <div class="hero-image">
+              <div class="hero-img-placeholder">
+                <i class="fa-solid fa-microchip"></i>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="hero-slide">
+            <div class="hero-text">
+              <h1 class="hero-featured-label">Science Today</h1>
+              <p class="hero-subtitle">Science · April 2026</p>
+              <p class="hero-desc">
+                Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
+                laboriosam, nisi ut aliquid ex ea commodi consequatur quis autem vel eum iure
+                reprehenderit qui in ea voluptate velit esse.
+              </p>
+              <a href="#" class="hero-learn-more">Learn More</a>
+            </div>
+            <div class="hero-image">
+              <div class="hero-img-placeholder">
+                <i class="fa-solid fa-atom"></i>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="hero-slide">
+            <div class="hero-text">
+              <h1 class="hero-featured-label">Culture & Arts</h1>
+              <p class="hero-subtitle">Culture · April 2026</p>
+              <p class="hero-desc">
+                Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam
+                nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas
+                nulla pariatur at vero eos et accusamus et iusto odio.
+              </p>
+              <a href="#" class="hero-learn-more">Learn More</a>
+            </div>
+            <div class="hero-image">
+              <div class="hero-img-placeholder">
+                <i class="fa-solid fa-palette"></i>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="hero-footer">
+        <div class="nav-dots" id="navDots">
+          <div class="nav-dot active" data-index="0"></div>
+          <div class="nav-dot" data-index="1"></div>
+          <div class="nav-dot" data-index="2"></div>
+          <div class="nav-dot" data-index="3"></div>
+          <div class="nav-dot" data-index="4"></div>
+        </div>
+        <div class="nav-arrows">
+          <button class="arrow-btn" id="prevBtn"><i class="fa-solid fa-chevron-left"></i></button>
+          <button class="arrow-btn" id="nextBtn"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="article-section">
+      <h1 class="article-page-title">Title</h1>
+
+      <div class="article-row">
+        <div class="article-img-block">IMG</div>
+        <div class="article-text-block">
+          <h2>Title</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            <a href="#" class="article-learn-more">&ensp;Learn More</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="article-row reverse">
+        <div class="article-img-block">IMG</div>
+        <div class="article-text-block">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <aside class="sidebar-right">
+    <h2 class="sidebar-title">Recent Stories</h2>
+    <div class="main-container">
+      <div class="containers">
+        <div class="container-image">
+          <a href="Music_Page.html"><img
+              src="https://images.macrumors.com/t/hi1_a2IdFGRGMsJ0x31SdD_IcRk=/1600x/article-new/2018/05/apple-music-note.jpg"
+              alt="Music image" title="Go to Music list"></a>
+        </div>
+        <div class="container-desc">
+          <h2><a href="Music.html" title="Go to Music list">Recent Story 1</a></h2>
+        </div>
+      </div>
+
+      <div class="containers">
+        <div class="container-image">
+          <a href="Music_Page.html"><img
+              src="https://images.macrumors.com/t/hi1_a2IdFGRGMsJ0x31SdD_IcRk=/1600x/article-new/2018/05/apple-music-note.jpg"
+              alt="Music image" title="Go to Music list"></a>
+        </div>
+        <div class="container-desc">
+          <h2><a href="Music.html" title="Go to Music list">Recent Story 2</a></h2>
+        </div>
+      </div>
+
+      <div class="containers">
+        <div class="container-image">
+          <a href="Music_Page.html"><img
+              src="https://images.macrumors.com/t/hi1_a2IdFGRGMsJ0x31SdD_IcRk=/1600x/article-new/2018/05/apple-music-note.jpg"
+              alt="Music image" title="Go to Music list"></a>
+        </div>
+        <div class="container-desc">
+          <h2><a href="Music.html" title="Go to Music list">Recent Story 3</a></h2>
         </div>
       </div>
     </div>
+  </aside>
 
-    <div class="hero-footer">
-      <div class="nav-dots">
-        <div class="nav-dot active"></div>
-        <div class="nav-dot"></div>
-        <div class="nav-dot"></div>
-        <div class="nav-dot"></div>
-        <div class="nav-dot"></div>
-      </div>
-      <div class="nav-arrows">
-        <button class="arrow-btn"><i class="fa-solid fa-chevron-left"></i></button>
-        <button class="arrow-btn"><i class="fa-solid fa-chevron-right"></i></button>
-      </div>
-    </div>
-  </section>
+  <script>
 
+    const hamburgerBtn = document.getElementById("hamburgerBtn");
+    const navMenu = document.getElementById("navMenu");
 
-  <section class="article-section">
-    <h1 class="article-page-title">Title</h1>
+    hamburgerBtn.addEventListener("click", () => {
+      navMenu.classList.toggle("active");
+    });
 
+    document.addEventListener("click", (event) => {
+      if (
+        !navMenu.contains(event.target) &&
+        !hamburgerBtn.contains(event.target)
+      ) {
+        navMenu.classList.remove("active");
+      }
+    });
 
-    <div class="article-row">
-      <div class="article-img-block">IMG</div>
-      <div class="article-text-block">
-        <h2>Title</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-          dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          <a href="#" class="article-learn-more">&ensp;Learn More</a>
-        </p>
-      </div>
-    </div>
+    const slidesInner = document.getElementById("heroSlidesInner");
+    const dots = document.querySelectorAll(".nav-dot");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+    const titleEl = document.getElementById("slideTitle");
+    const categoryEl = document.getElementById("slideCategory");
 
-  
-    <div class="article-row reverse">
-      <div class="article-img-block">IMG</div>
-      <div class="article-text-block">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-          dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </p>
-      </div>
-    </div>
-  </section>
+    const slideData = [
+      { title: "Featured Story", category: "Top Stories" },
+      { title: "Breaking News", category: "Politics" },
+      { title: "Tech Spotlight", category: "Technology" },
+      { title: "Science Today", category: "Science" },
+      { title: "Culture & Arts", category: "Culture" },
+    ];
 
-</main>
-      
-    </main>
+    let current = 0;
+    const total = slideData.length;
 
-    <aside class="sidebar-right">
-      <h2 class="sidebar-title">Recent Stories</h2>
-	  <div class="main-container">
-			<div class="containers">
-				<div class="container-image">
-					<a href="Music_Page.html"><img src="https://images.macrumors.com/t/hi1_a2IdFGRGMsJ0x31SdD_IcRk=/1600x/article-new/2018/05/apple-music-note.jpg" alt="Music image" title="Go to Music list"></a>
-				</div>
-				<div class="container-desc">
-					<h2><a href="Music.html" title="Go to Music list">Recent Story 1</a></h2>
-				</div>
-			</div>
-			
-			<div class="containers">
-				<div class="container-image">
-					<a href="Music_Page.html"><img src="https://images.macrumors.com/t/hi1_a2IdFGRGMsJ0x31SdD_IcRk=/1600x/article-new/2018/05/apple-music-note.jpg" alt="Music image" title="Go to Music list"></a>
-				</div>
-				<div class="container-desc">
-					<h2><a href="Music.html" title="Go to Music list">Recent Story 2</a></h2>
-				</div>
-			</div>
-			
-			<div class="containers">
-				<div class="container-image">
-					<a href="Music_Page.html"><img src="https://images.macrumors.com/t/hi1_a2IdFGRGMsJ0x31SdD_IcRk=/1600x/article-new/2018/05/apple-music-note.jpg" alt="Music image" title="Go to Music list"></a>
-				</div>
-				<div class="container-desc">
-					<h2><a href="Music.html" title="Go to Music list">Recent Story 3</a></h2>
-				</div>
-			</div>
-		</div>
-	  </div>
-    </aside>
+    function goTo(index) {
+      current = (index + total) % total;
+      slidesInner.style.transform = `translateX(-${current * 100}%)`;
+      dots.forEach((d, i) => d.classList.toggle("active", i === current));
+      titleEl.textContent = slideData[current].title;
+      categoryEl.textContent = slideData[current].category;
+    }
 
-    <script>
-      const hamburgerBtn = document.getElementById("hamburgerBtn");
-      const navMenu = document.getElementById("navMenu");
+    prevBtn.addEventListener("click", () => goTo(current - 1));
+    nextBtn.addEventListener("click", () => goTo(current + 1));
+    dots.forEach(d => d.addEventListener("click", () => goTo(+d.dataset.index)));
+  </script>
+</body>
 
-      hamburgerBtn.addEventListener("click", () => {
-        navMenu.classList.toggle("active");
-      });
-
-      document.addEventListener("click", (event) => {
-        if (
-          !navMenu.contains(event.target) &&
-          !hamburgerBtn.contains(event.target)
-        ) {
-          navMenu.classList.remove("active");
-        }
-      });
-    </script>
-  </body>
 </html>
