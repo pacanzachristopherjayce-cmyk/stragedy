@@ -236,11 +236,13 @@
 
     const hamburgerBtn = document.getElementById("hamburgerBtn");
     const navMenu = document.getElementById("navMenu");
-
+ 
+    // hamburger button is clicke? ->  show the nav menu
     hamburgerBtn.addEventListener("click", () => {
       navMenu.classList.toggle("active");
     });
-
+    
+    // if the nav menu is open AND the user clicks outside of it -> close the menu
     document.addEventListener("click", (event) => {
       if (
         !navMenu.contains(event.target) &&
@@ -250,35 +252,55 @@
       }
     });
 
-    const slidesInner = document.getElementById("heroSlidesInner");
-    const dots = document.querySelectorAll(".nav-dot");
-    const prevBtn = document.getElementById("prevBtn");
-    const nextBtn = document.getElementById("nextBtn");
-    const titleEl = document.getElementById("slideTitle");
-    const categoryEl = document.getElementById("slideCategory");
+const slidesInner = document.getElementById("heroSlidesInner"); // the flex row that holds all slides
+const dots        = document.querySelectorAll(".nav-dot");       // all 5 dot indicators (NodeList)
+const prevBtn     = document.getElementById("prevBtn");          // left arrow button
+const nextBtn     = document.getElementById("nextBtn");          // right arrow button
+const titleEl     = document.getElementById("slideTitle");       // topbar title text
+const categoryEl  = document.getElementById("slideCategory");    // topbar category text
 
-    const slideData = [
-      { title: "Featured Story", category: "Top Stories" },
-      { title: "Breaking News", category: "Politics" },
-      { title: "Tech Spotlight", category: "Technology" },
-      { title: "Science Today", category: "Science" },
-      { title: "Culture & Arts", category: "Culture" },
-    ];
+// ── Slide content ──
+// Each object maps to one slide — index 0 = slide 1, index 1 = slide 2, etc.
+const slideData = [
+  { title: "Featured Story", category: "Top Stories" },
+  { title: "Breaking News",  category: "Politics"    },
+  { title: "Tech Spotlight", category: "Technology"  },
+  { title: "Science Today",  category: "Science"     },
+  { title: "Culture & Arts", category: "Culture"     },
+];
 
-    let current = 0;
-    const total = slideData.length;
+// ── State ──
+let current = 0;              // tracks which slide is currently visible (starts at slide 0)
+const total = slideData.length; // total number of slides (5), used for wrap-around math
 
-    function goTo(index) {
-      current = (index + total) % total;
-      slidesInner.style.transform = `translateX(-${current * 100}%)`;
-      dots.forEach((d, i) => d.classList.toggle("active", i === current));
-      titleEl.textContent = slideData[current].title;
-      categoryEl.textContent = slideData[current].category;
-    }
+// ── Core function ──
+function goTo(index) {
+  // Keeps current between 0–4. 
+  // e.g. if index is -1 (prev from slide 0), (-1 + 5) % 5 = 4 → wraps to last slide
+  // e.g. if index is  5 (next from slide 4), ( 5 + 5) % 5 = 0 → wraps to first slide
+  current = (index + total) % total;
 
-    prevBtn.addEventListener("click", () => goTo(current - 1));
-    nextBtn.addEventListener("click", () => goTo(current + 1));
-    dots.forEach(d => d.addEventListener("click", () => goTo(+d.dataset.index)));
+  // Shifts the entire slide strip left by (current * 100)%
+  // e.g. slide 2 → translateX(-200%) hides slides 0 and 1 to the left
+  slidesInner.style.transform = `translateX(-${current * 100}%)`;
+
+  // Loops through all dots — adds "active" class only to the dot whose index matches current
+  // The second argument in toggle() is a boolean: true = add, false = remove
+  dots.forEach((dot, index) => dot.classList.toggle("active", index === current));
+
+  // Updates the topbar text to match the current slide's data
+  titleEl.textContent    = slideData[current].title;
+  categoryEl.textContent = slideData[current].category;
+}
+
+// ── Controls ──
+prevBtn.addEventListener("click", () => goTo(current - 1)); // go one slide back
+nextBtn.addEventListener("click", () => goTo(current + 1)); // go one slide forward
+
+// Give each dot a click listener that jumps directly to its slide
+// d.dataset.index reads the data-index="N" attribute from the HTML
+// the + converts the string "N" into a number before passing it to goTo()
+dots.forEach(d => d.addEventListener("click", () => goTo(+d.dataset.index)));
   </script>
 </body>
 
