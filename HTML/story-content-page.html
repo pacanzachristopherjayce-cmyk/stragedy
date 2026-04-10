@@ -11,28 +11,44 @@
     <link rel="stylesheet" href="../CSS/story-style.css" />
   </head>
   <body>
-    <nav class="sidebar-left">
-      <a href="#" class="logo">Logo</a>
-      <i class="fa-solid fa-bars menu-icon" id="hamburgerBtn"></i>
-      <i class="fa-solid fa-magnifying-glass search-icon"></i>
-    </nav>
+    <nav class="sidebar-left" id="sidebar">
+      <div class="sidebar-top">
+        <a href="#" class="logo-link">
+          <img src="#" alt="Logo" class="logo-img" />
+        </a>
 
-    <nav class="nav-menu" id="navMenu">
-      <ul class="nav-list">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Tragedies</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+        <a href="#" class="menu-item">
+          <i class="fa-solid fa-home"></i>
+          <span class="menu-text">Home</span>
+        </a>
+
+        <a href="#" class="menu-item">
+          <i class="fa-solid fa-book"></i>
+          <span class="menu-text">Tragedies</span>
+        </a>
+
+        <a href="#" class="menu-item">
+          <i class="fa-solid fa-phone"></i>
+          <span class="menu-text">Contact</span>
+        </a>
+
+        <a href="#" class="menu-item">
+          <i class="fa-solid fa-info-circle"></i>
+          <span class="menu-text">About</span>
+        </a>
+      </div>
     </nav>
 
     <main class="main-content">
       <div class="center-layout">
         <section class="center-banner-section">
-          <img
-            class="center-banner-image"
-            src="https://www.ue.edu.ph/cal/wp-content/uploads/2023/07/tyk_2023.jpg"
-            alt="Banner image"
-          />
+          <div class="center-banner-box">
+            <img
+              class="center-banner-image"
+              src="https://www.ue.edu.ph/cal/wp-content/uploads/2023/07/tyk_2023.jpg"
+              alt="Banner image"
+            />
+          </div>
         </section>
 
         <hr class="center-divider" />
@@ -58,7 +74,13 @@
             </div>
 
             <div class="center-feature-text">
-              <h2>Title</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -69,11 +91,12 @@
           </div>
 
           <div class="center-feature-row">
-            <div class="center-image-box">
-              <img
-                src="https://www.ue.edu.ph/cal/wp-content/uploads/2023/07/tyk_2023.jpg"
-                alt="Feature image 2"
-              />
+            <div class="center-facts-box">
+              <h3>Key Facts</h3>
+              <p><strong>Date:</strong> January 15, 2024</p>
+              <p><strong>Location:</strong> Manila, Philippines</p>
+              <p><strong>Casualties:</strong> 12 injured</p>
+              <p><strong>Cause:</strong> Electrical fire</p>
             </div>
 
             <div class="center-feature-text">
@@ -181,23 +204,5 @@
         </div>
       </div>
     </aside>
-
-    <script>
-      const hamburgerBtn = document.getElementById("hamburgerBtn");
-      const navMenu = document.getElementById("navMenu");
-
-      hamburgerBtn.addEventListener("click", () => {
-        navMenu.classList.toggle("active");
-      });
-
-      document.addEventListener("click", (event) => {
-        if (
-          !navMenu.contains(event.target) &&
-          !hamburgerBtn.contains(event.target)
-        ) {
-          navMenu.classList.remove("active");
-        }
-      });
-    </script>
   </body>
 </html>
