@@ -7,6 +7,7 @@
   <title>Stragedy</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="CSS/index.css">
+  <link rel="stylesheet" href="./CSS/bootstrap.min.css">
   <link rel="icon" type="image/x-icon" href="./ASSETS/IMAGE/homePage/logo.png">
 
   <style>
@@ -31,14 +32,14 @@
 
   <main class="main-content">
 
-    <h1 class="text-logo">Stragedy</h1>
+    <h1 class="text-logo display-1 fw-bold text-uppercase">Stragedy</h1>
 
     <section class="hero-section">
 
       <div class="hero-topbar">
-        <span class="hero-topbar-title" id="slideTitle">Title goes here</span>
-        <span class="hero-topbar-sep">-</span>
-        <span class="hero-topbar-category" id="slideCategory">Category goes here</span>
+        <span class="hero-topbar-title text-uppercase fw-semibold" id="slideTitle">Title goes here</span>
+        <span class="hero-topbar-sep text-muted">-</span>
+        <span class="hero-topbar-title text-uppercase fw-semibold" id="slideCategory">Category goes here</span>
       </div>
 
 
@@ -49,13 +50,13 @@
 
           <div class="hero-slide">
             <div class="hero-text">
-              <h1 class="hero-featured-label">Lake Nyos Overturn</h1>
-              <p class="hero-desc">
+              <h1 class="hero-featured-label fw-bold">Lake Nyos Overturn</h1>
+              <p class="hero-desc ">
                 On August 21, 1986, a limnic eruption at Lake Nyos in Cameroon released
                 1.6 million tons of CO₂ — an invisible cloud that swept through surrounding
                 valleys and claimed 1,746 lives before dawn.
               </p>
-              <a href="#" class="hero-learn-more">Learn More</a>
+              <a href="#" class="hero-learn-more btn btn-outline-light btn-sm">Learn More</a>
             </div>
             <div class="hero-image">
               <div class="hero-img-placeholder">
@@ -67,14 +68,14 @@
 
           <div class="hero-slide">
             <div class="hero-text">
-              <h1 class="hero-featured-label">Great Smog of 1952</h1>
-              <p class="hero-desc">
+              <h1 class="hero-featured-label fw-bold">Great Smog of 1952</h1>
+              <p class="hero-desc ">
                 On December 5, 1952, an anticyclone trapped cold, stagnant air over London,
                 mixing coal smoke into a sulfuric acid mist so dense that buses were abandoned
                 mid-road and theater performances were canceled. By December 9, the smog had
                 silently claimed an estimated 12,000 lives.
               </p>
-              <a href="#" class="hero-learn-more">Learn More</a>
+              <a href="#" class="hero-learn-more btn btn-outline-light btn-sm">Learn More</a>
             </div>
             <div class="hero-image">
               <div class="hero-img-placeholder">
@@ -85,14 +86,14 @@
 
           <div class="hero-slide">
             <div class="hero-text">
-              <h1 class="hero-featured-label">Banqiao Dam Failure</h1>
-              <p class="hero-desc">
+              <h1 class="hero-featured-label fw-bold">Banqiao Dam Failure</h1>
+              <p class="hero-desc ">
                 On August 8, 1975, Super Typhoon Nina dropped a year's worth of rain in 24 hours,
                 overwhelming China's "Iron Dam." With sluice gates clogged and communication lines
                 severed, a 20-foot wall of water surged out, triggering a chain collapse of 62 dams
                 and an estimated 171,000 to 230,000 deaths.
               </p>
-              <a href="#" class="hero-learn-more">Learn More</a>
+              <a href="#" class="hero-learn-more btn btn-outline-light btn-sm">Learn More</a>
             </div>
             <div class="hero-image">
               <div class="hero-img-placeholder">
@@ -101,17 +102,16 @@
             </div>
           </div>
 
-
           <div class="hero-slide">
             <div class="hero-text">
-              <h1 class="hero-featured-label">The Holodomor</h1>
-              <p class="hero-desc">
+              <h1 class="hero-featured-label fw-bold">The Holodomor</h1>
+              <p class="hero-desc ">
                 In the winter of 1932–33, Stalin's Soviet government seized every scrap of food
                 from Ukrainian villages, set impossible grain quotas, and blocked starving
                 families from fleeing — all while exporting grain abroad. Between 3.9 and
                 7 million people perished in a famine engineered by policy, not drought.
               </p>
-              <a href="#" class="hero-learn-more">Learn More</a>
+              <a href="#" class="hero-learn-more btn btn-outline-light btn-sm">Learn More</a>
             </div>
             <div class="hero-image">
               <div class="hero-img-placeholder" style="padding-inline: 5em;">
@@ -123,14 +123,14 @@
 
           <div class="hero-slide">
             <div class="hero-text">
-              <h1 class="hero-featured-label">Tangshan Earthquake</h1>
-              <p class="hero-desc">
+              <h1 class="hero-featured-label fw-bold">Tangshan Earthquake</h1>
+              <p class="hero-desc ">
                 At 3:42 AM on July 28, 1976, a magnitude 7.8 earthquake struck the sleeping
                 city of Tangshan, China, collapsing 85% of its buildings in under 30 seconds.
                 With no warning and all aid refused on political grounds, an estimated
                 655,000 people perished — making it the deadliest earthquake of the 20th century.
               </p>
-              <a href="#" class="hero-learn-more">Learn More</a>
+              <a href="#" class="hero-learn-more btn btn-outline-light btn-sm">Learn More</a>
             </div>
             <div class="hero-image">
               <div class="hero-img-placeholder">
@@ -151,32 +151,41 @@
           <div class="nav-dot" data-index="4"></div>
         </div>
         <div class="nav-arrows">
-          <button class="arrow-btn" id="prevBtn"><i class="fa-solid fa-chevron-left"></i></button>
-          <button class="arrow-btn" id="nextBtn"><i class="fa-solid fa-chevron-right"></i></button>
+          <button class="arrow-btn btn btn-outline-light btn-sm" id="prevBtn"><i
+              class="fa-solid fa-chevron-left"></i></button>
+          <button class="arrow-btn btn btn-outline-light btn-sm" id="nextBtn"><i
+              class="fa-solid fa-chevron-right"></i></button>
         </div>
       </div>
 
     </section>
 
     <section class="article-section">
-      <h1 class="article-page-title">Uncovering Forgotten and Buried Tragedies</h1>
+      <h1 class="article-page-title display-5 fw-bold text-center mb-4">Uncovering Forgotten and Buried Tragedies</h1>
 
       <div class="article-row">
-        <div class="article-img-block">IMG</div>
+        <img class="article-image" src="./ASSETS/IMAGE/homePage/shedding-light.webp" width="500" height="250" />
         <div class="article-text-block">
-       
           <p>
-            Stragedy is a digital archive dedicated to bringing forgotten global tragedies into the light by uncovering stories that have been sidelined for too long. We dig deep into historical records to investigate exactly what happened and why these events took place, ensuring that hidden narratives are finally given the attention they deserve. By analyzing the history behind these moments, we aim to provide a comprehensive look at how they shaped our world.
-
+            <strong>Stragedy</strong> is a digital archive dedicated to
+            bringing <em>forgotten global tragedies</em> into the light by uncovering stories that have been sidelined
+            for too long. We <strong>dig deep</strong> into historical records to investigate exactly what happened and
+            why these events took place, ensuring that <strong>hidden narratives</strong> are finally given the
+            attention they deserve.
           </p>
         </div>
       </div>
 
       <div class="article-row reverse">
-        <div class="article-img-block">IMG</div>
+        <img src="./ASSETS/IMAGE/homePage/logo.png" alt="" width="600" height="500">
         <div class="article-text-block">
           <p>
-            The name itself is a mix of "strategy" and "tragedy," our mission is to explore the specific strategies used to manage each crisis. We go beyond the surface of a disaster to examine the decision-making and planning that occurred in the heat of the moment. By studying these historical strategies, we uncover the lessons learned from the past and shed light on the events that time almost forgot.
+            The name itself is a mix of <span style="letter-spacing: 1px; font-weight: 600;">"strategy"</span> and <span
+              style="letter-spacing: 1px; font-weight: 600;">"tragedy,"</span> our mission is to explore the specific
+            strategies used to manage each crisis. We go <u>beyond the surface</u> of a disaster to examine the
+            <strong>decision-making and planning</strong> that occurred in the heat of the moment. By studying these
+            historical strategies, we uncover the lessons learned from the past and <strong>shed light</mark> on the
+              events that time almost forgot.
           </p>
         </div>
       </div>
@@ -184,39 +193,33 @@
 
   </main>
 
-  <aside class="sidebar-right">
-    <h2 class="sidebar-title">Recent Stories</h2>
-    <div class="main-container">
+  <aside class="sidebar-right d-none d-md-block">
+    <h2 class="sidebar-title fw-bold text-uppercase fs-5">Recent Stories</h2>
+    <div class="main-container container-sm">
       <div class="containers">
         <div class="container-image">
-          <a href="Music_Page.html"><img
-              src="https://images.macrumors.com/t/hi1_a2IdFGRGMsJ0x31SdD_IcRk=/1600x/article-new/2018/05/apple-music-note.jpg"
-              alt="Music image" title="Go to Music list"></a>
+          <img src="./ASSETS/IMAGE/homePage/rana-plaza.jpg" alt="">
         </div>
         <div class="container-desc">
-          <h2><a href="Music.html" title="Go to Music list">Recent Story 1</a></h2>
+          <h2 class="fs-6 fw-semibold"><a href="Music.html" title="Go to Music list">Rana Plaza Earthquake</a></h2>
         </div>
       </div>
 
       <div class="containers">
         <div class="container-image">
-          <a href="Music_Page.html"><img
-              src="https://images.macrumors.com/t/hi1_a2IdFGRGMsJ0x31SdD_IcRk=/1600x/article-new/2018/05/apple-music-note.jpg"
-              alt="Music image" title="Go to Music list"></a>
+          <img src="./ASSETS/IMAGE/homePage/seveso-disaster.avif" alt="">
         </div>
         <div class="container-desc">
-          <h2><a href="Music.html" title="Go to Music list">Recent Story 2</a></h2>
+          <h2 class="fs-6 fw-semibold"><a href="Music.html" title="Go to Music list">Seveso Disaster</a></h2>
         </div>
       </div>
 
       <div class="containers">
         <div class="container-image">
-          <a href="Music_Page.html"><img
-              src="https://images.macrumors.com/t/hi1_a2IdFGRGMsJ0x31SdD_IcRk=/1600x/article-new/2018/05/apple-music-note.jpg"
-              alt="Music image" title="Go to Music list"></a>
+          <img src="./ASSETS/IMAGE/homePage/tsunami-libon.jpg" alt="">
         </div>
         <div class="container-desc">
-          <h2><a href="Music.html" title="Go to Music list">Recent Story 3</a></h2>
+          <h2 class="fs-6 fw-semibold"><a href="Music.html" title="Go to Music list">Tsunami of Lisbon</a></h2>
         </div>
       </div>
     </div>
