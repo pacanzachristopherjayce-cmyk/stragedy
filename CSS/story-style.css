@@ -109,7 +109,7 @@ body {
 
 .sidebar-right {
   border-left: 1px solid var(--line);
-  padding: 20px;
+  padding: 35px;
   display: flex;
   flex-direction: column;
   background: linear-gradient(180deg, #122d5a, #10264f);
@@ -226,7 +226,6 @@ body {
 .center-intro-text {
   font-size: 1rem;
   line-height: 1.65;
-  font-weight: 700;
   margin: 0 0 18px;
   max-width: 100%;
 }
@@ -275,7 +274,7 @@ body {
   color: var(--text);
   font-size: 1rem;
   line-height: 1.35;
-  font-weight: 700;
+
 }
 
 .center-feature-text h2 {
@@ -287,7 +286,6 @@ body {
 .center-feature-text p {
   font-size: 1rem;
   line-height: 1.65;
-  font-weight: 700;
   margin: 0 0 12px;
 }
 
