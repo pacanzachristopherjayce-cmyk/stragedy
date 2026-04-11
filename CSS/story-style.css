@@ -117,13 +117,13 @@ body {
     overflow: hidden;
 }
 
-.sidebar-title {
-    color: var(--gold);
-    font-size: 2rem;
-    margin-top: 0;
-    margin-bottom: 20px;
-    text-align: center;
-}
+ .sidebar-title {
+        color: var(--gold);
+        font-size: 2rem;
+        margin-top: 0;
+        margin-bottom: 20px;
+        text-align: center;
+    }
 
 
 .main-container {
