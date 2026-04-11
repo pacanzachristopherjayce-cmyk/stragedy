@@ -253,7 +253,7 @@
         background-color: white;
         color: var(--bg);
     }
-
+    
     .sidebar-right {
         border-left: 1px solid var(--line);
         padding: 20px;
@@ -262,7 +262,7 @@
         flex-direction: column;
         background: linear-gradient(180deg, #122d5a, #10264f);
     }
-
+    
     .sidebar-title {
         color: var(--gold);
         font-size: 2rem;
