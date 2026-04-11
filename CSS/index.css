@@ -537,3 +537,10 @@
     .article-text-block>p {
         font-size: 24px;
     }
+
+
+    .quote em {
+      color: var(--gold);
+      font-weight: bold;
+      font-size: 35px;
+    }
