@@ -190,6 +190,7 @@
       display: block;       
       background-color: var(--img-bg); 
     }
+    
     .about-text {
       flex: 1;
       font-size: 1.8rem;
