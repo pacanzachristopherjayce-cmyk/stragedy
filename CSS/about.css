@@ -169,46 +169,46 @@
     */
 
     .about-section {
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
+      width: 100% !important;
+      max-width: 1200px !important;
+      margin: 0 auto !important;
+      display: block !important;
     }
 
     .about-row {
       display: flex !important;
-      flex-direction: row;
-      width: 100%;
-      gap: 50px;
-      align-items: center;
-      margin-bottom: 80px;
+      flex-direction: row !important;
+      width: 100% !important;
+      gap: 50px !important;
+      align-items: center !important;
+      margin-bottom: 80px !important;
     }
 
     .about-text {
-      width: 50% !important; 
-      flex: 1;
-      min-width: 300px;
-      font-size: 1.5rem;
-      line-height: 1.6;
-      text-align: justify;
+      width: 60% !important; 
+      flex: none !important; 
+      font-size: 1.2rem !important;
+      line-height: 1.6 !important;
+      text-align: justify !important;
     }
 
     .about-img-box1, 
     .about-img-box2 {
-      flex: 0 0 45%;
-      max-width: 45%;
-      aspect-ratio: 16 / 10;
-      border-radius: 30px;
-      display: block;
-      background-color: var(--img-bg);
+      width: 35% !important; 
+      flex: none !important; 
+      aspect-ratio: 16 / 10 !important;
+      border-radius: 30px !important;
+      display: block !important;
+      background-color: var(--img-bg) !important;
+      object-fit: cover !important;
     }
 
     .about-img-box1 {
-      object-fit: cover;
+      object-fit: cover !important;
     }
 
     .about-img-box2 {
-      object-fit: contain;
+      object-fit: contain !important;
     }
     
     /*
