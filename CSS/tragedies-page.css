@@ -16,7 +16,7 @@
         background-color: var(--bg);
         color: var(--text);
         display: grid;
-        grid-template-columns: 6% 1fr 20%;
+        grid-template-columns: 80px 1fr 20%;
         height: 100vh;
         overflow: hidden;
       }
@@ -313,3 +313,12 @@
 	.show {
 	  display: inline-block;
 	}
+
+  @media (max-width: 1100px) {
+  body {
+    grid-template-columns: 80px 1fr;
+  }
+  .sidebar-right {
+    display: none;
+  }
+}

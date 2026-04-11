@@ -15,18 +15,18 @@
   <nav class="sidebar-left">
     <div class="sidebar-top">
       <a href="#" class="logo-link">
-        <img src="../ASSETS/IMAGE/homePage/logo.png" alt="Logo" class="logo-img" />
+        <img src="./ASSETS/IMAGE/homePage/logo.png" alt="Logo" class="logo-img" />
       </a>
       
-      <a href="../index.html" class="menu-item">
+      <a href="../index.html" class="menu-item active">
         <i class="fa-solid fa-home"></i>
         <span class="menu-text">Home</span>
       </a>
-      <a href="../HTML/tragedies-page.html" class="menu-item">
+      <a href="./HTML/tragedies-page.html" class="menu-item">
         <i class="fa-solid fa-book"></i>  
         <span class="menu-text">Tragedies</span>
       </a>
-      <a href="contact2.html" class="menu-item active">
+      <a href="./HTML/contact2.html" class="menu-item ">
         <i class="fa-solid fa-phone"></i>
         <span class="menu-text">Contact</span>
       </a>
@@ -239,25 +239,6 @@
   </aside>
 
   <script>
-
-    const hamburgerBtn = document.getElementById("hamburgerBtn");
-    const navMenu = document.getElementById("navMenu");
-
-
-    hamburgerBtn.addEventListener("click", () => {
-      navMenu.classList.toggle("active");
-    });
-
-
-    document.addEventListener("click", (event) => {
-      if (
-        !navMenu.contains(event.target) &&
-        !hamburgerBtn.contains(event.target)
-      ) {
-        navMenu.classList.remove("active");
-      }
-    });
-
     const slidesInner = document.getElementById("heroSlidesInner");
     const dots = document.querySelectorAll(".nav-dot");
     const prevBtn = document.getElementById("prevBtn");
