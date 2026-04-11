@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tragedies</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<link rel="stylesheet" href="../CSS/tragedies-page.css">
+	<link rel="icon" type="image/x-icon" href="../ASSETS/IMAGE/homePage/logo.png">
+	<!--
+    <style>
+      :root {
+        --bg: #0d2348;
+        --panel: #172f5d;
+        --panel-dark: #10274d;
+        --right: #112954;
+        --line: #2b456e;
+        --gold: #d9b449;
+        --text: #f4f6fb;
+        --card: #081827;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--bg);
+        color: var(--text);
+        display: grid;
+        grid-template-columns: 6% 1fr 20%;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      /* --- Left Sidebar --- */
+      .sidebar-left {
+        background-color: var(--panel-dark);
+        width: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 20;
+        box-shadow: 2px 0 10px rgba(0,0,0,0.3);
+        border-right: 1px solid var(--line);
+      }
+
+      .sidebar-top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+      }
+
+      .logo-link {
+        padding: 15px 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+
+      .logo-img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: white;
+        object-fit: cover;
+      }
+
+      .menu-item {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 12px 0;
+        color: white;
+        text-decoration: none;
+        transition: background-color 0.2s;
+        cursor: pointer;
+      }
+
+      .menu-item:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+
+      .menu-item i {
+        font-size: 22px;
+      }
+
+		.menu-item.active {
+	  background: linear-gradient(135deg, var(--gold), #f5d76e);
+	  color: var(--bg);
+	}
+	.profile-pic {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        border: 2px solid white;
+        object-fit: cover;
+      }
+
+      /* Text labels are now always visible */
+      .menu-text {
+        font-size: 13px;
+        margin-top: 6px;
+        display: block;
+        text-align: center;
+      }
+
+      .sidebar-bottom {
+        padding-bottom: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+
+      /* Static icon instead of a toggle button */
+      .static-icon {
+        color: white;
+        font-size: 22px;
+        padding: 10px;
+      }
+
+      /* --- Main Content Area --- */
+      .main-content {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 40px 0 40px;
+        overflow-y: auto;
+        position: relative;
+        z-index: 1;
+        background-color: var(--bg);
+      }
+
+      .page-title {
+        color: var(--gold);
+        text-align: center;
+        font-size: 2.2rem;
+        margin-top: 0;
+        margin-bottom: 30px;
+        letter-spacing: 1px;
+        display: inline-block;
+        align-self: center;
+        padding: 8px 18px 10px;
+      }
+
+      .content-section {
+        margin-bottom: 20px;
+      }
+
+      .img-placeholder {
+        background-color: #6f89aa;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.5rem;
+        color: white;
+        float: left;
+        margin-right: 20px;
+        margin-bottom: 10px;
+        overflow: hidden;
+      }
+
+      .mem-box-1 {
+        margin-left: auto;
+        margin-right: auto;
+        width: 240px;
+        height: 240px;
+        border-radius: 900%;
+      }
+
+      .img-box-2 {
+        width: 50%;
+        height: 240px;
+      }
+
+      .text-block {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 15px;
+        color: #f2f4f8;
+      }
+
+      .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+
+      /* --- Social Footer --- */
+      .social-footer {
+        margin-top: auto;
+        padding: 30px 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      .social-icon {
+        width: 45px;
+        height: 45px;
+        border: 2px solid white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        color: white;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .social-icon:hover {
+        background-color: white;
+        color: var(--bg);
+      }
+	  
+    .body-container {
+		font-family: Avenir,Sailors,"Neue Montreal", Verdana, sans-serif;
+		max-width: 100%;
+		margin: 0 auto;
+		padding: 60px 20px 60px 20px;
+		color: #051923;
+	}
+	
+	.body-main-container{
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		gap:20px;
+		flex-wrap:wrap;
+	}
+	
+	.body-containers{
+		text-align:center;
+		width:300px;
+		height:400px;
+	}
+
+	.body-container-image img{
+		width: 100%;
+		height: 300px;
+		object-fit: cover;
+		display: block;
+		border-radius:10%;
+	}
+	.body-container-image img:hover{
+		transform: scale(1.05);
+		z-index: 10;
+		position: relative; 
+	}	
+
+	.body-container-desc a{
+		text-decoration:none;
+		color: var(--text);
+	}
+
+	.body-container-desc h2{
+		padding:10px;
+	}
+
+	.body-container-desc a:hover{
+		text-decoration:underline;
+		color: var(--gold);
+	}
+	
+      /* --- Right Sidebar --- */
+      .sidebar-right {
+        border-left: 1px solid var(--line);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient(180deg, #122d5a, #10264f);
+      }
+
+      .sidebar-title {
+        color: var(--gold);
+        font-size: 2rem;
+        margin-top: 0;
+        margin-bottom: 20px;
+		text-align:center;
+      }
+	  
+	.main-container {
+	  display: grid;
+	  grid-template-columns: auto auto; /* 2 columns */
+	  justify-content: center;          /* center whole block */
+	  column-gap: 10px;                 /* space between columns */
+	  row-gap: 15px;                   /* space between rows */
+	}
+
+	.containers {
+	  display: flex;
+	  align-items: center;             /* space between checkbox and label */
+	}
+	
+	@media (max-width: 1500px) {
+	  .main-container {
+		grid-template-columns: auto; /* switch to 1 column */
+	  }
+	}
+	
+	input[type="checkbox"] {
+	  accent-color: #facc15; /* yellow */
+	  width: 20px;
+	  height: 20px;
+	}
+	
+	label{
+	vertical-align:top;
+	}
+	
+	.filterDiv {
+	  display: none;
+	}
+
+	.show {
+	  display: inline-block;
+	}
+		  
+    </style>
+	-->
+  </head>
+  <body>
+    <nav class="sidebar-left" id="sidebar">
+		<div class="sidebar-top">
+			<a href="#" class="logo-link">
+			  <img src="../ASSETS/IMAGE/homePage/logo.png" alt="Logo" class="logo-img" />
+			</a>
+			
+			<a href="#" class="menu-item">
+			  <i class="fa-solid fa-home"></i>
+			  <span class="menu-text">Home</span>
+			</a>
+			<a href="#" class="menu-item active">
+			  <i class="fa-solid fa-book"></i>  
+			  <span class="menu-text">Tragedies</span>
+			</a>
+			<a href="#" class="menu-item">
+			  <i class="fa-solid fa-phone"></i>
+			  <span class="menu-text">Contact</span>
+			</a>
+			<a href="#" class="menu-item">
+			  <i class="fa-solid fa-info-circle"></i>
+			  <span class="menu-text">About</span>
+			</a>
+		</div>
+  
+    </nav>
+		<main class="main-content">
+			<h1 class="page-title">Tragedies</h1>
+			  
+			<div class="body-container">
+				<div class="body-main-container">
+					<div class="body-containers filterDiv weather">
+						<div class="body-container-image">
+							<a href="Music_Page.html"><img src="https://images.macrumors.com/t/hi1_a2IdFGRGMsJ0x31SdD_IcRk=/1600x/article-new/2018/05/apple-music-note.jpg" alt="Music image" title="Go to Music list"></a>
+						</div>
+						<div class="body-container-desc">
+							<h2><a href="Music.html" title="Go to Music list">Story 1</a></h2>
+						</div>
+					</div>
+					<div class="body-containers filterDiv natural">
+						<div class="body-container-image">
+							<a href="Movie_Page.html"><img src="https://www.bworldonline.com/wp-content/uploads/2022/05/cinema-film.jpg" alt="Movie Image" title="Go to Movie list"></a>
+						</div>
+						<div class="body-container-desc">
+							<h2><a href="Movie.html" title="Go to Movie list">Story 2</a></h2>
+						</div>
+					</div>
+					<div class="body-containers filterDiv man-made">
+						<div class="body-container-image">
+							<a href="TV_page.html"><img src="https://www.online-psychology-degrees.org/wp-content/uploads/2019/10/shutterstock_702291805.jpg" alt="TV image" title="Go to TV list"></a>
+						</div>
+						<div class="body-container-desc">
+							<h2><a href="TV.html" title="Go to TV list">Story 3</a></h2>
+						</div>
+					</div>
+					<div class="body-containers filterDiv natural">
+						<div class="body-container-image">
+							<a href="TV_page.html"><img src="https://www.online-psychology-degrees.org/wp-content/uploads/2019/10/shutterstock_702291805.jpg" alt="TV image" title="Go to TV list"></a>
+						</div>
+						<div class="body-container-desc">
+							<h2><a href="TV.html" title="Go to TV list">Story 3</a></h2>
+						</div>
+					</div>
+					<div class="body-containers filterDiv natural">
+						<div class="body-container-image">
+							<a href="TV_page.html"><img src="https://www.online-psychology-degrees.org/wp-content/uploads/2019/10/shutterstock_702291805.jpg" alt="TV image" title="Go to TV list"></a>
+						</div>
+						<div class="body-container-desc">
+							<h2><a href="TV.html" title="Go to TV list">Story 3</a></h2>
+						</div>
+					</div>
+					<div class="body-containers filterDiv man-made homicide">
+						<div class="body-container-image">
+							<a href="TV_page.html"><img src="https://www.online-psychology-degrees.org/wp-content/uploads/2019/10/shutterstock_702291805.jpg" alt="TV image" title="Go to TV list"></a>
+						</div>
+						<div class="body-container-desc">
+							<h2><a href="TV.html" title="Go to TV list">Story 3</a></h2>
+						</div>
+					</div>
+					<div class="body-containers filterDiv man-made">
+						<div class="body-container-image">
+							<a href="TV_page.html"><img src="https://www.online-psychology-degrees.org/wp-content/uploads/2019/10/shutterstock_702291805.jpg" alt="TV image" title="Go to TV list"></a>
+						</div>
+						<div class="body-container-desc">
+							<h2><a href="TV.html" title="Go to TV list">Story 3</a></h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+    <aside class="sidebar-right">
+		<h2 class="sidebar-title">Filters</h2>
+		<div class="main-container">
+
+		  <div class="containers">
+			<input type="checkbox" name="filter" value="man-made" id="man-made">
+			<label for="man-made">Man-made</label>
+		  </div>
+
+		  <div class="containers">
+			<input type="checkbox" name="filter" value="natural" id="natural">
+			<label for="natural">Natural</label>
+		  </div>
+		  
+		  <div class="containers">
+			<input type="checkbox" name="filter" value="accident" id="accident">
+			<label for="accident">Accident</label>
+		  </div>
+		  
+		  <div class="containers">
+			<input type="checkbox" name="filter" value="intentional" id="intentional">
+			<label for="intentional">Intentional</label>
+		  </div>
+
+		  <div class="containers">
+			<input type="checkbox" name="filter" value="geological" id="geological">
+			<label for="geological">Geological</label>
+		  </div>
+		  
+		  <div class="containers">
+			<input type="checkbox" name="filter" value="weather" id="weather">
+			<label for="weather">Weather</label>
+		  </div>
+		  
+		  <div class="containers">
+			<input type="checkbox" name="filter" value="volcanic" id="volcanic">
+			<label for="volcanic">Volcanic</label>
+		  </div>
+		  
+		  <div class="containers">
+			<input type="checkbox" name="filter" value="biological" id="biological">
+			<label for="biological">Biological</label>
+		  </div>
+		  
+		  <div class="containers">
+			<input type="checkbox" name="filter" value="engineering" id="engineering">
+			<label for="engineering">Engineering Fails</label>
+		  </div>
+		  
+		  <div class="containers">
+			<input type="checkbox" name="filter" value="industrial" id="industrial">
+			<label for="industrial">Industrial</label>
+		  </div>
+		  
+		  <div class="containers">
+			<input type="checkbox" name="filter" value="radiochemical" id="radiochemical">
+			<label for="radiochemical">Radiochemical</label>
+		  </div>
+		  
+		  <div class="containers">
+			<input type="checkbox" name="filter" value="pollution" id="pollution">
+			<label for="pollution">Ecological</label>
+		  </div>
+		  
+		  <div class="containers">
+			<input type="checkbox" name="filter" value="transportation" id="transportation">
+			<label for="transportation">Transportation</label>
+		  </div>
+		  
+		  <div class="containers">
+			<input type="checkbox" name="filter" value="crowding" id="crowding">
+			<label for="crowding">Crowding</label>
+		  </div>
+		  
+		  <div class="containers">
+			<input type="checkbox" name="filter" value="homicide" id="homicide">
+			<label for="homicide">Homicide</label>
+		  </div>
+		  
+		  <div class="containers">
+			<input type="checkbox" name="filter" value="famine" id="famine">
+			<label for="famine">Famine</label>
+		  </div>
+		</div>
+    </aside>
+
+    <script>
+			// Run when page loads → show all
+		window.onload = function () {
+		  filterSelection();
+
+		  var checkboxes = document.getElementsByName("filter");
+
+		  for (var i = 0; i < checkboxes.length; i++) {
+			checkboxes[i].addEventListener("change", filterSelection);
+		  }
+		};
+		function filterSelection() {
+		  var items = document.getElementsByClassName("filterDiv");
+		  var checkboxes = document.getElementsByName("filter");
+		  var activeFilters = [];
+
+		  // Collect checked filters
+		  for (var i = 0; i < checkboxes.length; i++) {
+			if (checkboxes[i].checked) {
+			  activeFilters.push(checkboxes[i].value);
+			}
+		  }
+
+		  for (var i = 0; i < items.length; i++) {
+			var el = items[i];
+			var classes = el.className;
+
+			// ✅ If NOTHING selected → show all
+			if (activeFilters.length === 0) {
+			  el.classList.add("show");
+			  continue;
+			}
+
+			// ✅ AND logic
+			var show = true;
+
+			for (var j = 0; j < activeFilters.length; j++) {
+			  if (classes.indexOf(activeFilters[j]) === -1) {
+				show = false;
+				break;
+			  }
+			}
+
+			// ✅ THIS is where your bug was
+			if (show) {
+			  el.classList.add("show");
+			} else {
+			  el.classList.remove("show");
+			}
+		  }
+		}
+	</script>
+  </body>
+</html>
