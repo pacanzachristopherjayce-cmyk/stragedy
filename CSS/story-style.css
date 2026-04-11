@@ -109,7 +109,7 @@ body {
 
 .sidebar-right {
     border-left: 1px solid var(--line);
-    padding: 45px;
+    padding: 15px;
     display: flex;
     flex-direction: column;
     background: linear-gradient(180deg, #122d5a, #10264f);
