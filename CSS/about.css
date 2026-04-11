@@ -185,9 +185,10 @@
     }
 
     .about-text {
+      width: 50% !important; 
       flex: 1;
       min-width: 300px;
-      font-size: 1.2rem;
+      font-size: 1.5rem;
       line-height: 1.6;
       text-align: justify;
     }
