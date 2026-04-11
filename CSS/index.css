@@ -495,9 +495,7 @@
         align-items: flex-start;
     }
 
-    .article-row.reverse {
-        flex-direction: row-reverse;
-    }
+  
 
     .article-img-block {
         flex-shrink: 0;
