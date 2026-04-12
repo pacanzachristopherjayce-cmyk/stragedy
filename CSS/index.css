@@ -381,7 +381,7 @@
       font-size: 35px;
     }
 
-    @media(max-height:1080px){
+    @media(max-height:800px){
       .sidebar-right {
         border-left: 1px solid var(--line);
         padding: 20px;
@@ -405,4 +405,5 @@
         margin-bottom: 50px;
       }
     }
+
   
