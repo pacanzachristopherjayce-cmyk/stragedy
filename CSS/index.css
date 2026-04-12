@@ -128,7 +128,7 @@
         background: linear-gradient(180deg, #122d5a, #10264f);
     }
 
-    @media(max-height:1080px){
+    @media(max-height:1000px){
       .sidebar-right {
         border-left: 1px solid var(--line);
         padding: 20px;
@@ -255,7 +255,6 @@
         display: flex;
         transition: 0.7s;
     }
-
     .hero-slide {
         min-width: 100%;
         display: flex;
@@ -265,7 +264,6 @@
         max-height: 400px;
         margin-bottom: 50px;
       }
-
 
 
     .hero-featured-label {
