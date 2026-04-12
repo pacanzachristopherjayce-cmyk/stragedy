@@ -81,7 +81,7 @@
     }
 
     .menu-item.active {
-        background: linear-gradient(135deg, var(--gold), #f5d76e);
+        background: linear-gradient(135deg, var(--gold), #9e7e0b); /* top left first color, bottom right last color */
         color: var(--bg);
     }
 
