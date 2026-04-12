@@ -233,6 +233,7 @@
 		object-fit: cover;
 		display: block;
 		border-radius:10%;
+    border: 2px solid white;
 	}
 	.body-container-image img:hover{
 		transform: scale(1.05);

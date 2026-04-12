@@ -110,40 +110,11 @@
         margin-top: 0;
         margin-bottom: 30px;
         letter-spacing: 1px;
-        display: inline-block;
-        align-self: center;
         padding: 8px 18px 10px;
     }
 
     .content-section {
         margin-bottom: 20px;
-    }
-
-    .img-placeholder {
-        background-color: #6f89aa;
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 2.5rem;
-        color: white;
-        float: left;
-        margin-right: 20px;
-        margin-bottom: 10px;
-        overflow: hidden;
-    }
-
-    .mem-box-1 {
-        margin-left: auto;
-        margin-right: auto;
-        width: 240px;
-        height: 240px;
-        border-radius: 900%;
-    }
-
-    .img-box-2 {
-        width: 50%;
-        height: 240px;
     }
 
     .text-block {
