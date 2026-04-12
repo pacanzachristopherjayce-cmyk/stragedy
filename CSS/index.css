@@ -45,15 +45,6 @@
 }
 
 
-
-    .menu-icon {
-        font-size: 28px;
-        color: white;
-        cursor: pointer;
-        margin-bottom: auto;
-        transition: color 0.2s;
-    }
-
     .logo-link {
         padding: 15px 0;
         width: 100%;
@@ -66,7 +57,7 @@
         height: 60px;
         border-radius: 50%;
         background-color: white;
-        object-fit: cover;
+        object-fit: cover; /* makes the even fit to the cover container */
     }
 
     .menu-item {
