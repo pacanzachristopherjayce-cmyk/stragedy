@@ -142,6 +142,7 @@
         display: flex;
         flex-direction: column;
         background: linear-gradient(180deg, #122d5a, #10264f);
+        overflow: auto;
     }
     
     .sidebar-title {
@@ -206,7 +207,11 @@
         text-decoration: underline;
         color: var(--gold);
     }
-
+    .hero-section{
+        display: block;
+        justify-content: center;
+    }
+    
     .hero-topbar {
         display: flex;
         align-items: center;
