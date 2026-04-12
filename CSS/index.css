@@ -207,10 +207,6 @@
         text-decoration: underline;
         color: var(--gold);
     }
-    .hero-section{
-        display: block;
-        justify-content: center;
-    }
     
     .hero-topbar {
         display: flex;
@@ -255,7 +251,18 @@
         margin-bottom: 50px;
     }
 
-
+    @media (max-height:1080px) {
+        .hero-slide {
+        min-width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 100px;
+        padding: 30px 30px 0;
+        max-height: 400px;
+        margin-bottom: 50px;
+      }
+    }
 
     .hero-featured-label {
         color: var(--gold);
