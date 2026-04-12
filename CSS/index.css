@@ -44,6 +44,7 @@
     z-index: 20;
     box-shadow: 2px 0 10px rgba(0,0,0,0.3); 
     border-right: 1px solid var(--line);
+    overflow-y: scroll;
 }
 .sidebar-top {
     display: flex;
@@ -221,6 +222,7 @@
   
     .hero-slides-track {
         overflow: hidden;
+        width: 100%;
     }
 
    
@@ -275,8 +277,9 @@
     }
 
     .hero-img-placeholder {
-        width: 500px;
+        width: 400px;
         height: 400px;
+        overflow: hidden;
 
     }
 
