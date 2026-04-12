@@ -39,18 +39,11 @@
     width: 80px;
     display: flex;
     flex-direction: column;
-    justify-content: start; 
-    
     z-index: 20;
     box-shadow: 2px 0 10px rgba(0,0,0,0.3); 
     border-right: 1px solid var(--line);
 }
-.sidebar-top {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
+
 
 
     .menu-icon {
