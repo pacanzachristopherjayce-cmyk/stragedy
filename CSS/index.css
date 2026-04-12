@@ -207,12 +207,6 @@
         color: var(--gold);
     }
 
-    .hero-section {
-        min-height: 80vh;
-        display: flex;
-        flex-direction: column;
-    }
-
     .hero-topbar {
         display: flex;
         align-items: center;
