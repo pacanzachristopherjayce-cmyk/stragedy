@@ -135,7 +135,6 @@
         height: 100vh;
         display: flex;
         flex-direction: column;
-        overflow: hidden;
         background: linear-gradient(180deg, #122d5a, #10264f);
       }
     }
@@ -259,9 +258,8 @@
         min-width: 100%;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content:flex-start;
         gap: 20px;
-        padding-right:30px;
         max-height: 400px;
         margin-bottom: 50px;
       }
