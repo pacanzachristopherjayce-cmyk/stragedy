@@ -113,7 +113,7 @@ body {
     flex-direction: column;
     background: linear-gradient(180deg, #122d5a, #10264f);
     height: 100vh;
-    overflow: hidden;
+    overflow: auto;
 }
 
  .sidebar-title {
