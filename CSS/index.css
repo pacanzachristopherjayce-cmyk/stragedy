@@ -232,7 +232,8 @@
     .hero-slide {
         min-width: 100%;
         display: flex;
-        align-items: flex-start;
+        align-items: center;
+        justify-content: center;
         gap: 20px;
         padding: 30px 30px 0;
         max-height: 400px;
