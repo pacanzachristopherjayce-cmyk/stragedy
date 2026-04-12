@@ -169,7 +169,6 @@
               class="fa-solid fa-chevron-right"></i></button>
         </div>
       </div>
-
     </section>
 
     <section class="article-section">
@@ -183,7 +182,7 @@
     </div>
   </div>
 
-  <div class="article-row reverse">
+  <div class="article-row">
     <div class="article-text-block">
       <p>
         Once you’ve filtered your search, you can choose from a huge variety of <strong>stories and reports</strong> that explain exactly what happened and how people tried to handle the situation at the time. Our goal is to make sure these global events are remembered and understood by everyone. Feel free to click around, discover something new, and see how these lessons from the past can help us today.
@@ -273,17 +272,18 @@
       goTo(current - 1);
       scroll = false;
     });
+
     nextBtn.addEventListener("click", () => {
       goTo(current + 1);
       scroll = false;
     });
-
 
     dots.forEach(d => d.addEventListener("click", () => {
       goTo(+d.dataset.index);
       scroll = false;
     }));
 
+    // automatic scrolling
     let scroll = true;
     setInterval(() => {
       if (scroll) {
