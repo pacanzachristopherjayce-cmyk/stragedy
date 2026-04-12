@@ -31,7 +31,7 @@
         display: grid;
         grid-template-columns: 80px 1fr 20%;
         height: 100vh;
-        overflow: hidden;
+        overflow: hidden; 
     }
 
     .sidebar-left {
