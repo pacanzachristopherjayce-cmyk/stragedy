@@ -44,7 +44,6 @@
     z-index: 20;
     box-shadow: 2px 0 10px rgba(0,0,0,0.3); 
     border-right: 1px solid var(--line);
-    overflow-y: scroll;
 }
 .sidebar-top {
     display: flex;
@@ -125,6 +124,7 @@
         height: 100vh;
         display: flex;
         flex-direction: column;
+        overflow-y: scroll;
         background: linear-gradient(180deg, #122d5a, #10264f);
     }
     
@@ -235,9 +235,9 @@
         min-width: 100%;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         gap: 20px;
-        padding: 30px 30px 0;
+        padding: 30px 30px 0 80px;
         max-height: 400px;
         margin-bottom: 50px;
     }
@@ -383,3 +383,10 @@
       font-weight: bold;
       font-size: 35px;
     }
+
+
+
+   /*  @media (max-height: 1080px) {
+      .sidebar-right {}
+
+    } */
