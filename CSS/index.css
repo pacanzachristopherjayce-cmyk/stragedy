@@ -353,7 +353,7 @@
         color: var(--gold);
         font-size: 2rem;
         font-weight: 800;
-        margin-block: 18px;
+        margin-block: 30px 18px;
         text-align: center;
     }
 
@@ -361,8 +361,6 @@
         display: flex;
         gap: 24px;
     }
-
-
 
     .article-text-block h2 {
         color: var(--gold);
@@ -376,11 +374,6 @@
         color: #d8deee;
         text-align: justify;
         margin: 0;
-    }
-
-    .article-learn-more {
-        color: var(--text);
-        text-decoration: underline;
     }
 
 
