@@ -39,10 +39,10 @@
     width: 80px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;   /* ← missing from index.css */
+    justify-content: space-between; 
     align-items: center;
     z-index: 20;
-    box-shadow: 2px 0 10px rgba(0,0,0,0.3);  /* ← missing from index.css */
+    box-shadow: 2px 0 10px rgba(0,0,0,0.3); 
     border-right: 1px solid var(--line);
 }
 .sidebar-top {
@@ -354,18 +354,18 @@
         opacity: 0.5;
     }
 
-    /* ── CAROUSEL: clipping window ── */
+  
     .hero-slides-track {
         overflow: hidden;
     }
 
-    /* ── CAROUSEL: flex row of all slides ── */
+   
     .hero-slides-inner {
         display: flex;
         transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    /* ── CAROUSEL: each individual slide ── */
+   
     .hero-slide {
         min-width: 100%;
         display: flex;
