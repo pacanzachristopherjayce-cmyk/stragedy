@@ -124,8 +124,20 @@
         height: 100vh;
         display: flex;
         flex-direction: column;
-        overflow-y: auto;
+        overflow: hidden;
         background: linear-gradient(180deg, #122d5a, #10264f);
+    }
+
+    @media(max-height:1080px){
+      .sidebar-right {
+        border-left: 1px solid var(--line);
+        padding: 20px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        background: linear-gradient(180deg, #122d5a, #10264f);
+      }
     }
     
     .sidebar-title {
@@ -231,7 +243,8 @@
         transition: 0.7s;
     }
 
-    .hero-slide {
+    @media (max-height:1080px){
+      .hero-slide {
         min-width: 100%;
         display: flex;
         align-items: center;
@@ -239,7 +252,19 @@
         gap: 20px;
         max-height: 400px;
         margin-bottom: 50px;
+      }
     }
+
+    .hero-slide {
+        min-width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        padding-right:30px;
+        max-height: 400px;
+        margin-bottom: 50px;
+      }
 
 
 
