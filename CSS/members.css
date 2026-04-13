@@ -253,6 +253,8 @@
       flex-shrink: 0;
     }
 
+    .member-avatar:hover{ transform: translateY(-5px); }
+
     .member-name {
       font-size: 1rem;
       color: var(--text);

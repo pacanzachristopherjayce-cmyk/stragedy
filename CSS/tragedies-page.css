@@ -1,3 +1,4 @@
+
 :root {
         --bg: #0d2348;
         --panel: #172f5d;
@@ -322,4 +323,57 @@
   .sidebar-right {
     display: none;
   }*/
+@media (max-width: 768px) {
+
+  /* Keep page as 2 columns instead of stacking */
+  body {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    height: auto;
+  }
+
+  /* Move sidebar-right to be visible and fixed-style */
+  .sidebar-right {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    padding: 10px;
+    overflow-y: auto;
+    border-left: 1px solid var(--line);
+  }
+
+  /* Main content takes left side */
+  .main-content {
+  min-width: 0;
+  overflow-x: hidden;
+}
+
+  /* Optional: make filter layout tighter */
+  .main-container {
+    grid-template-columns: auto;
+    gap: 10px;
+  }
+
+  /* Left sidebar becomes top bar (keep yours but improve stacking) */
+  .sidebar-left {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    flex-direction: row;
+    justify-content: space-around;
+    z-index: 1000;
+  }
+
+  .sidebar-top {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  /* Push content down so it doesn't hide behind top bar */
+  body {
+    padding-top: 60px;
+  }
 }
