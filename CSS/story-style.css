@@ -327,3 +327,93 @@ body {
     line-height: 1.7;
     margin: 0;
 }
+
+@media (max-width: 768px) {
+
+  /* =========================
+     GLOBAL LAYOUT RESET
+  ========================= */
+  body {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+
+  /* =========================
+     TOP NAVBAR (from sidebar-left)
+  ========================= */
+  body {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        
+    }
+
+    .text-logo {
+        font-size: 2.2rem;
+        margin-bottom: 15px;
+    }
+
+    /* 2. Hide left sidebar (or shrink it) */
+    .sidebar-left {
+        position: fixed;
+        top: 0; /* or top: 0 if you prefer */
+        left: 0;
+        width: 100%;
+        height: 65px;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 5px 0;
+        z-index: 1000;
+    }
+
+    .sidebar-top {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    /* 3. Make main content full width */
+    .main-content {
+        padding-bottom: 80px;
+        margin-top: 60px;
+    }
+
+  /* =========================
+     RIGHT SIDEBAR → BOTTOM
+  ========================= */
+  .sidebar-right {
+        width: 100%;
+        height: auto;
+        order: 2;
+        padding: 15px;
+    }
+  .main-container {
+    grid-template-columns: 1fr;
+}
+
+    .containers {
+        height: auto;
+    }
+
+    .container-image {
+        aspect-ratio: 5 / 3; /* slightly flatter */
+        max-height: 120px;   /* controls overall size */
+    }
+
+    .container-image img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .containers {
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .container-desc h2 {
+        font-size: 0.75rem;
+        line-height: 1.2;
+    }
+}

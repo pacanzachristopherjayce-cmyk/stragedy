@@ -269,4 +269,163 @@
       body { grid-template-columns: 80px 1fr; }
       .sidebar-right { display: none; }
     }
-  </style>
+@media (max-width: 768px) {
+
+  /* =========================
+     RESET LAYOUT
+  ========================= */
+  body {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    overflow-x: hidden;
+  }
+
+  /* =========================
+     TOP NAVBAR (sidebar-left)
+  ========================= */
+  .sidebar-left {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 65px;
+
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    z-index: 1000;
+  }
+
+  .sidebar-top {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .logo-img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .menu-text {
+    display: none; /* cleaner mobile nav */
+  }
+
+  /* =========================
+     MAIN CONTENT FIX
+  ========================= */
+  .main-content {
+    margin-top: 70px; /* space for fixed navbar */
+    padding: 16px;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Title scaling */
+  .header-title {
+    font-size: 2.2rem;
+    padding: 20px 0;
+  }
+
+  /* =========================
+     PROFILE STACK LAYOUT
+  ========================= */
+  .profile-container {
+    padding: 0 12px 30px;
+    gap: 25px;
+  }
+
+  .middle-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .contact-info {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+
+  .contact-title {
+    font-size: 2rem;
+  }
+
+  .info-item {
+    justify-content: center;
+    font-size: 1rem;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  /* =========================
+     IMAGE RESPONSIVE FIX
+  ========================= */
+  .large-img-box {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    border-radius: 24px;
+  }
+
+  .member-role {
+    font-size: 1rem;
+  }
+
+  /* =========================
+     TEXT FIX
+  ========================= */
+  .footer-text {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  /* safety: prevent overflow anywhere */
+  * {
+    max-width: 100%;
+  }
+
+  .sidebar-right {
+        width: 100%;
+        height: auto;
+        border-left: none;
+        border-top: 1px solid var(--line);
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .members-panel {
+        flex-direction: row;
+        overflow-x: auto;
+        gap: 15px;
+        padding-bottom: 10px;
+    }
+
+    .member-item {
+        flex: 0 0 auto;
+        flex-direction: column;
+        text-align: center;
+        min-width: 80px;
+    }
+
+    .member-avatar {
+        width: 45px;
+        height: 45px;
+    }
+
+    .member-name {
+        font-size: 0.75rem;
+    }
+
+    /* 🚫 prevent overflow */
+    html, body {
+        overflow-x: hidden;
+    }
+}

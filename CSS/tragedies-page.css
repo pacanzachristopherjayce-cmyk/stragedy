@@ -8,8 +8,7 @@
         --gold: #d9b449;
         --text: #f4f6fb;
         --card: #081827;
-      }
-
+        }
       body {
         margin: 0;
         padding: 0;
@@ -324,13 +323,19 @@
     display: none;
   }*/
 @media (max-width: 768px) {
-
   /* Keep page as 2 columns instead of stacking */
   body {
     display: grid;
     grid-template-columns: 60% 40%;
     height: auto;
+    padding:0;
+    margin:0;
   }
+
+  .text-logo {
+        font-size: 2.2rem;
+        margin-bottom: 15px;
+    }
 
   /* Move sidebar-right to be visible and fixed-style */
   .sidebar-right {
@@ -356,24 +361,30 @@
 
   /* Left sidebar becomes top bar (keep yours but improve stacking) */
   .sidebar-left {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 60px;
-    flex-direction: row;
-    justify-content: space-around;
-    z-index: 1000;
-  }
+        position: fixed;
+        top: 0; /* or top: 0 if you prefer */
+        left: 0;
+        width: 100%;
+        height: 65px;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 5px 0;
+        z-index: 1000;
+        padding:0;
+    margin:0;
+    }
 
   .sidebar-top {
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
-  }
+    
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+    }
 
   /* Push content down so it doesn't hide behind top bar */
-  body {
-    padding-top: 60px;
-  }
+  .main-content {
+        padding-bottom: 80px;
+        margin-top: 60px;
+    }
 }
