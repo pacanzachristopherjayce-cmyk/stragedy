@@ -405,116 +405,63 @@
         margin-bottom: 50px;
       }
     }
-@media (max-width: 768px) {
-    body {
-        grid-template-columns: 1fr; /* Single column stack */
-        grid-template-rows: auto;    /* Let content dictate height */
-        height: auto;
-        overflow-y: auto;
+
+    @media (max-width: 768px) {
+    /* 1. Prevent the body from stretching horizontally */
+    html, body {
+        max-width: 100vw;
+        overflow-x: hidden;
     }
 
-    /* 1. Compact Header Navigation */
-    .sidebar-left {
-        width: 100%;
-        height: 60px; /* Fixed height for top bar */
-        flex-direction: row;
-        position: sticky;
-        top: 0;
-        padding: 0 10px;
-    }
-
-    .sidebar-top {
-        flex-direction: row;
-        height: 100%;
-    }
-
-    .logo-img {
-        width: 35px;
-        height: 35px;
-    }
-
-    .menu-item {
-        padding: 0 10px;
-        height: 100%;
-        justify-content: center;
-    }
-
-    .menu-text {
-        display: none; /* Hide text on mobile to save space, icons only */
-    }
-
-    /* 2. Slimming down Main Content */
-    .main-content {
-        padding: 20px 15px;
-        background-color: var(--bg); /* Blend with background */
-    }
-
-    .hero-topbar-title {
-        font-size: 1.2rem; /* Much smaller title */
-    }
-
+    /* 2. Fix the Hero Slide overflow */
     .hero-slide {
         flex-direction: column;
-        gap: 15px;
-        margin-bottom: 30px;
+        min-width: 0; /* Allows flex items to shrink below content size */
+        width: 100%;
+        margin-bottom: 20px;
+        gap: 10px;
     }
 
-    .hero-img-placeholder {
-        width: 100% !important;
-        height: 200px !important; /* Force a smaller height */
-    }
-
-    .hero-featured-label {
-        font-size: 1.8rem;
-        text-align: center;
-    }
-
-    .hero-desc {
-        font-size: 15px;
-        line-height: 1.5;
-        text-align: center;
+    /* 3. Force images and placeholders to stay within bounds */
+    .hero-image, 
+    .hero-img-placeholder,
+    .img-box-2,
+    .container-image {
+        width: 100% !important; /* Overrides the 450px/340px */
         max-width: 100%;
+        height: auto !important; 
+        min-width: 0;
     }
 
-    /* 3. Taming the Right Sidebar */
+    /* 4. Fix the Hero Track and Inner container */
+    .hero-slides-track,
+    .hero-slides-inner {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    /* 5. Sidebar Right Grid - ensure it doesn't push width */
     .sidebar-right {
         width: 100%;
-        height: auto; /* Remove the 100vh constraint */
-        padding: 20px;
-        border-left: none;
-        border-top: 1px solid var(--line);
+        box-sizing: border-box; /* Ensures padding doesn't add to width */
+        padding: 15px;
     }
 
     .main-container {
         display: grid;
-        grid-template-columns: 1fr 1fr; /* Put recommendations side-by-side */
-        gap: 15px;
+        grid-template-columns: 1fr 1fr; /* Two items side by side */
+        gap: 10px;
+        width: 100%;
     }
 
-    .containers {
-        height: auto; /* Let it shrink */
-        margin-bottom: 10px;
+    /* 6. Clean up text and titles that might be too long */
+    .hero-featured-label {
+        font-size: 1.8rem;
+        word-wrap: break-word;
     }
 
-    .container-image {
-        aspect-ratio: 1 / 1; /* Square images for grid look */
-    }
-
-    .sidebar-title {
-        font-size: 1.4rem;
-        margin-bottom: 15px;
-    }
-
-    /* 4. Article Section Adjustments */
-    .article-row {
-        flex-direction: column;
-    }
-
-    .article-text-block > p {
-        font-size: 18px; /* Reduce from 24px */
-    }
-
-    .quote em {
-        font-size: 22px; /* Tame the massive gold quotes */
+    .article-text-block p {
+        text-align: left; /* Justified text can look weird on narrow screens */
+        font-size: 1rem;
     }
 }
