@@ -217,10 +217,12 @@
 
     .about-img-box1 {
       object-fit: cover !important;
+      border:2px solid white;
     }
 
     .about-img-box2 {
       object-fit: contain !important;
+      border:2px solid white;
     }
     
     /*
@@ -310,7 +312,12 @@
       color: white;
       flex-shrink: 0;
       object-fit: cover;
+      border: 1px solid white;
     }
+
+    .member-avatar:hover
+      { transform: translateY(-5px); }
+    
 
     .member-name {
       font-size: 1rem;
