@@ -199,6 +199,7 @@
     flex-direction: column;
     height: auto;
     overflow-x: hidden;
+  overflow-y: auto;
   }
 
   /* 📱 sidebar becomes top navbar */
@@ -271,19 +272,18 @@
 
   /* 👥 members grid becomes tighter */
   .members-grid {
-    gap: 15px;
-    max-width: 100%;
-  }
+  display: flex;
+  flex-direction: column;   /* 🔥 stack vertically */
+  flex-wrap: nowrap;
+  overflow: auto;        /* remove scrolling */
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
 
   .member-card {
-    width: 120px;
-  }
-
-  .m-name {
-    font-size: 14px;
-  }
-
-  .m-role {
-    font-size: 11px;
-  }
+  width: 80%;
+  max-width: 250px;
+}
 }
