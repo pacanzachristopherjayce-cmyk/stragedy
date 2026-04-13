@@ -177,7 +177,7 @@
 
     .about-row {
       display: flex !important;
-      flex-direction: column !important;
+      flex-direction: row;
       width: 100% !important;
       gap: 50px !important;
       align-items: center !important;
@@ -326,9 +326,9 @@
       .sidebar-right { display: none; }
     }
 
-      @media (max-width: 800px)
+      @media (max-width: 1000px)
     {
       .about-row {
-      flex-direction: row;
+      flex-direction: column;
       }
     }
