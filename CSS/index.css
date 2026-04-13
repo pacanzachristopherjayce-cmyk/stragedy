@@ -239,7 +239,6 @@
         gap: 20px;
         max-height: 400px;
         margin-bottom: 50px;
-        
       }
 
     .hero-featured-label {
@@ -271,20 +270,26 @@
 
     .hero-image {
         width: 340px;
-        flex-shrink: 0;
+        
     }
 
     .hero-img-placeholder {
+        display: flex;
         width: 100%;
-        height: 400px;
-        overflow: hidden;
+        aspect-ratio: 5 / 3.2;
         justify-content: center;
 
     }
 
-    .hero-img-placeholder img{
-      object-fit: cover;
-      display: block;
+    hero-img-placeholder img{
+        object-fit: cover;
+        display: block;
+        border-radius: 10%;
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 5 / 3.2;
+
     }
 
     .hero-footer {
