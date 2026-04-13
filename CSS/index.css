@@ -421,12 +421,18 @@
         display: flex;
         flex-direction: column;
         height: auto;
+        
+    }
+
+    .text-logo {
+        font-size: 2.2rem;
+        margin-bottom: 15px;
     }
 
     /* 2. Hide left sidebar (or shrink it) */
     .sidebar-left {
         position: fixed;
-        bottom: 0; /* or top: 0 if you prefer */
+        top: 0; /* or top: 0 if you prefer */
         left: 0;
         width: 100%;
         height: 65px;
@@ -446,6 +452,7 @@
     /* 3. Make main content full width */
     .main-content {
         padding-bottom: 80px;
+        margin-top: 70px;
     }
 
     /* 4. Move right sidebar BELOW content */
@@ -454,6 +461,24 @@
         height: auto;
         order: 2;
         padding: 15px;
+    }
+
+    .quote em {
+        font-size: 1.1rem;   /* much cleaner */
+        line-height: 1.4;
+    }
+
+    .hero-topbar-title {
+        font-size: 1rem;
+    }
+
+
+    .article-page-title {
+        font-size: 1.4rem;
+    }
+
+    .article-text-block p {
+        font-size: 0.9rem;
     }
 
     /* 5. Hero section fix */
@@ -466,17 +491,28 @@
     }
 
     .hero-image {
-        width: 100%;
-        height: auto;
-    }
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 16 / 9; /* 🔥 consistent ratio */
+}
     
     .hero-desc{
       display: none;
     }
 
-    .hero-img-placeholder img {
-        width: 100%;
-        height: auto;
+    .hero-img-placeholder {
+    width: 100%;
+    height: 100%;
+}
+
+.hero-img-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* 🔥 THIS is the key */
+    border-radius: 20px;
+}
+    .hero-topbar {
+        margin-top: 10px;
     }
 
     /* 6. Fix text overflow */
@@ -491,50 +527,31 @@
 
     /* 7. Fix Recent Stories grid */
     .main-container {
-        display: flex;
-        flex-direction: row;
-        overflow-x: auto;
-        gap: 12px;
-        padding-bottom: 10px;
-        scroll-snap-type: x mandatory;
-    }
+    grid-template-columns: 1fr;
+}
 
-    /* Hide ugly scrollbar (optional) */
-    .main-container::-webkit-scrollbar {
-        display: none;
-    }
-
-    .main-container {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-    }
-
-    /* Each card */
     .containers {
-        min-width: 160px;
-        flex: 0 0 auto;
-        scroll-snap-align: start;
+        height: auto;
     }
 
-    /* Image sizing */
     .container-image {
-        width: 100%;
-        height: auto;
+        aspect-ratio: 5 / 3; /* slightly flatter */
+        max-height: 120px;   /* controls overall size */
     }
 
     .container-image img {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
+        height: 100%;
+        object-fit: cover;
     }
 
-    /* Text cleanup */
-    .container-desc {
+    .containers {
         height: auto;
+        margin-bottom: 10px;
     }
 
     .container-desc h2 {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
+        line-height: 1.2;
     }
 
     /* 8. Prevent ANY horizontal scroll */
