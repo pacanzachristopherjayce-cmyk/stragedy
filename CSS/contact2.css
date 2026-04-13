@@ -190,3 +190,100 @@
       .main-layout { grid-template-columns: 1fr; overflow-y: auto; height: auto; }
       .contact-side { border-right: none; border-bottom: 1px solid var(--line); }
     }
+
+@media (max-width: 768px) {
+
+  /* 🔁 overall layout becomes vertical */
+  body {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    overflow-x: hidden;
+  }
+
+  /* 📱 sidebar becomes top navbar */
+  .sidebar-left {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 65px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .sidebar-top {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .menu-item i {
+    font-size: 18px;
+  }
+
+  .menu-text {
+    font-size: 9px;
+  }
+
+  /* 🧱 push content below navbar */
+  .main-layout {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin-top: 70px;
+  }
+
+  /* 📄 sections stack */
+  .page-section {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .contact-side {
+    border-right: none;
+    border-bottom: 1px solid var(--line);
+  }
+
+  /* 🏷️ titles smaller */
+  .title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  /* 🖼️ logo scales down */
+  .main-logo-container {
+    width: 180px;
+    height: 180px;
+  }
+
+  /* 📞 contact links smaller */
+  .contact-item {
+    font-size: 18px;
+    gap: 12px;
+  }
+
+  .contact-item i {
+    font-size: 28px;
+  }
+
+  /* 👥 members grid becomes tighter */
+  .members-grid {
+    gap: 15px;
+    max-width: 100%;
+  }
+
+  .member-card {
+    width: 120px;
+  }
+
+  .m-name {
+    font-size: 14px;
+  }
+
+  .m-role {
+    font-size: 11px;
+  }
+}

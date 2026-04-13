@@ -184,9 +184,6 @@
       margin-bottom: 80px !important;
     }
 
-
-  
-
     .about-img-box1 {
       width: 45% !important;
       flex: none !important; 
@@ -197,7 +194,10 @@
       background-color: var(--img-bg) !important;
     }
     .about-img-box2 {
-      width: 80% !important;
+      width: 100% !important;
+      max-width: 500px;
+      height: auto;
+      margin: 0 auto;
       flex: none !important; 
       aspect-ratio: 16 / 10 !important;
       border-radius: 30px !important;
@@ -205,6 +205,7 @@
       object-fit: cover !important;
       background-color: var(--img-bg) !important;
     }
+
 
     .about-text {
       width: 50% !important;
@@ -326,9 +327,108 @@
       .sidebar-right { display: none; }
     }
 
-      @media (max-width: 1000px)
-    {
-      .about-row {
-      flex-direction: column;
-      }
+@media (max-width: 768px) {
+
+    /* 🔁 layout becomes vertical */
+    body {
+        display: flex;
+        flex-direction: column;
+        height: auto;
     }
+
+    /* 📱 top navbar */
+    .sidebar-left {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 65px;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .sidebar-top {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .menu-item i {
+        font-size: 18px;
+    }
+
+    .menu-text {
+        font-size: 9px;
+    }
+
+    /* 🧱 push main content down */
+    .main-content {
+        margin-top: 70px;
+        padding: 20px;
+    }
+
+    /* 🧾 title */
+    .header-title {
+        font-size: 2rem;
+        padding: 15px 0;
+    }
+
+    /* 🧠 about layout stacks */
+    .about-row {
+        flex-direction: column !important;
+        gap: 20px !important;
+        margin-bottom: 40px !important;
+    }
+
+    .about-img-box1,
+    .about-img-box2 {
+        max-height: 220px;
+        object-fit: cover;
+    }
+
+    .about-text {
+        width: 100% !important;
+        font-size: 1rem !important;
+    }
+
+    /* 👥 RIGHT SIDEBAR (KEEP IT) */
+    .sidebar-right {
+        width: 100%;
+        height: auto;
+        border-left: none;
+        border-top: 1px solid var(--line);
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .members-panel {
+        flex-direction: row;
+        overflow-x: auto;
+        gap: 15px;
+        padding-bottom: 10px;
+    }
+
+    .member-item {
+        flex: 0 0 auto;
+        flex-direction: column;
+        text-align: center;
+        min-width: 80px;
+    }
+
+    .member-avatar {
+        width: 45px;
+        height: 45px;
+    }
+
+    .member-name {
+        font-size: 0.75rem;
+    }
+
+    /* 🚫 prevent overflow */
+    html, body {
+        overflow-x: hidden;
+    }
+}
