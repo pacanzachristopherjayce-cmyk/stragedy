@@ -232,7 +232,6 @@
     }
 
     .hero-slide {
-        border: 1px solid white;
         min-width: 100%;
         display: flex;
         align-items: center;
@@ -240,6 +239,7 @@
         gap: 20px;
         max-height: 400px;
         margin-bottom: 50px;
+        
       }
 
     .hero-featured-label {
@@ -272,6 +272,7 @@
     .hero-image {
         width: 340px;
         flex-shrink: 0;
+        object-fit: cover;
     }
 
     .hero-img-placeholder {
