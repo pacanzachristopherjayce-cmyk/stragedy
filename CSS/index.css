@@ -126,7 +126,7 @@
         display: flex;
         flex-direction: column;
         overflow: hidden;
-        background: linear-gradient(180deg, #122d5a, #10264f);
+        background: var(--panel);
     }
   
     .sidebar-title {
@@ -657,5 +657,24 @@
     opacity: 0.6;
 }
 
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .site-footer {
+        padding: 40px 20px 100px; /* Extra bottom padding for mobile nav */
+    }
 
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        justify-content: center;
+        gap: 30px;
+    }
+    
+    .footer-brand {
+        margin-bottom: 20px;
+    }
+}
 
