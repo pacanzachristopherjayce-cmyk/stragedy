@@ -132,6 +132,7 @@
     .sidebar-title {
         color: var(--gold);
         font-size: 2rem;
+        font-weight: bold;
         margin-top: 0;
         margin-bottom: 20px;
         text-align: center;
@@ -418,7 +419,7 @@
 
 @media (max-width: 768px) {
 
-    /* 1. Change layout to vertical */
+    /* 1. Change layout to vertical */po on
     body {
         display: flex;
         flex-direction: column;
@@ -573,5 +574,13 @@
     .menu-item {
         font-size: 12px;
     }
+
+}
+
+
+
+.line {
+  height: 50px;
+  color: var(--text);
 
 }
