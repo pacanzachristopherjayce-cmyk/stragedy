@@ -575,6 +575,10 @@
         font-size: 12px;
     }
 
+    .line{
+      display:none;
+    }
+
 }
 
 
