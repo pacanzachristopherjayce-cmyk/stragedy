@@ -5,12 +5,12 @@
     }
 
     :root {
-        --bg: #0d2348;
-        --panel: #172f5d;
-        --panel-dark: #10274d;
+        --bg: #474a4f;
+        --panel: #000000;
+        --panel-dark: #585f6b;
         --right: #112954;
         --line: #2b456e;
-        --gold: #d9b449;
+        --gold: #790f26;
         --text: #f4f6fb;
         --card: #081827;
     } 
