@@ -5,15 +5,15 @@
     }
 
     :root {
-    --bg: #0b0b0b;         /* main black background */
-    --panel: #140d0d;      /* dark maroon-black */
-    --panel-dark: #2a0f12; /* deeper maroon panel */
-    --line: #5b2b2f;       /* borders/lines */
-    --gold: #f5f1eb;       /* change this to off-white for headings */
-    --text: #f5f1eb;       /* main text */
-    --img-bg: #2b1a1d;     /* image placeholder bg */
-    --card: #080808;       /* darkest cards */
-}
+      --bg: #0d2348;
+      --panel: #0d2348;
+      --panel-dark: #10274d;
+      --line: #2b456e;
+      --gold: #d9b449;
+      --text: #f4f6fb;
+      --img-bg: #3e4f66;
+      --card: #081827;
+    }
 
     .text-logo {
         color: var(--gold);
@@ -106,7 +106,7 @@
         overflow-y: auto;
         position: relative;
         z-index: 1;
-        background-color: var(--panel);
+        background-color: var(--bg);
     }
 
     .img-box-2 {
@@ -582,3 +582,5 @@
   color: var(--text);
 
 }*/
+
+
