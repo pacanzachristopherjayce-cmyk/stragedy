@@ -296,6 +296,15 @@ body {
     line-height: 1.65;
     margin: 0 0 12px;
 }
+.center-facts-box a {
+    text-decoration: none;
+    color:var(--text)
+}
+
+.center-facts-box a:hover {
+    text-decoration: none;
+    color:var(--gold)
+}
 
 .center-card-row {
     display: grid;
