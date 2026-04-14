@@ -770,58 +770,66 @@
     </aside>
 
     <script>
-			// Run when page loads → show all
-		window.onload = function () {
-		  function filterSelection() {
-        var items = document.getElementsByClassName("filterDiv");
-        var checkboxes = document.getElementsByName("filter");
-        var activeFilters = [];
-        var visibleCount = 0; // 👈 track visible items
+        function filterSelection() {
+          var items = document.getElementsByClassName("filterDiv");
+          var checkboxes = document.getElementsByName("filter");
+          var activeFilters = [];
+          var visibleCount = 0;
 
-        // Collect checked filters
-        for (var i = 0; i < checkboxes.length; i++) {
-          if (checkboxes[i].checked) {
-            activeFilters.push(checkboxes[i].value);
-          }
-        }
-
-        for (var i = 0; i < items.length; i++) {
-          var el = items[i];
-          var classes = el.className;
-
-          if (activeFilters.length === 0) {
-            el.classList.add("show");
-            visibleCount++; // 👈 count it
-            continue;
-          }
-
-          var show = true;
-
-          for (var j = 0; j < activeFilters.length; j++) {
-            if (classes.indexOf(activeFilters[j]) === -1) {
-              show = false;
-              break;
+          // Get checked filters
+          for (var i = 0; i < checkboxes.length; i++) {
+            if (checkboxes[i].checked) {
+              activeFilters.push(checkboxes[i].value);
             }
           }
 
-          if (show) {
-            el.classList.add("show");
-            visibleCount++; // 👈 count visible
+          // Show/hide items
+          for (var i = 0; i < items.length; i++) {
+            var el = items[i];
+            var classes = el.className;
+
+            if (activeFilters.length === 0) {
+              el.classList.add("show");
+              visibleCount++;
+              continue;
+            }
+
+            var show = true;
+
+            for (var j = 0; j < activeFilters.length; j++) {
+              if (classes.indexOf(activeFilters[j]) === -1) {
+                show = false;
+                break;
+              }
+            }
+
+            if (show) {
+              el.classList.add("show");
+              visibleCount++;
+            } else {
+              el.classList.remove("show");
+            }
+          }
+
+          // Show message if nothing found
+          var message = document.getElementById("noResultsMessage");
+
+          if (visibleCount === 0) {
+            message.textContent = "No stories available";
+            message.style.display = "block";
           } else {
-            el.classList.remove("show");
+            message.style.display = "none";
           }
         }
 
-        // 👇 SHOW / HIDE MESSAGE
-        var message = document.getElementById("noResultsMessage");
+        // Run on page load
+        window.onload = filterSelection;
 
-        if (visibleCount === 0) {
-          message.style.display = "block";
-        } else {
-          message.style.display = "none";
+        // Run when filters change
+        var checkboxes = document.getElementsByName("filter");
+        for (var i = 0; i < checkboxes.length; i++) {
+          checkboxes[i].addEventListener("change", filterSelection);
         }
-      }
-		}
-	</script>
+        </script>
   </body>
 </html>
